@@ -1,0 +1,23 @@
+.buttons-solid-large {
+  background-color: #0acf83;
+  border-radius: 16px;
+  height: 54px;
+  overflow: hidden;
+  position: relative;
+  width: 280px;
+}
+
+.buttons-solid-large .start-free {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 20px;
+  font-weight: 600;
+  height: 24px;
+  left: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 13px;
+  width: 200px;
+}

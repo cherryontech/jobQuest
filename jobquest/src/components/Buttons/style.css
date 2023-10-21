@@ -1,0 +1,45 @@
+.buttons {
+    height: 54px;
+    width: 280px;
+  }
+  
+  .buttons .class {
+    color: #090459 !important;
+    font-weight: 700 !important;
+    top: 12px !important;
+  }
+  
+  .buttons .class-2 {
+    color: #281fe2 !important;
+    font-weight: 700 !important;
+    top: 12px !important;
+  }
+  
+  .buttons .class-3 {
+    font-weight: 700 !important;
+  }
+  
+  .buttons .class-4 {
+    background-color: #281fe2 !important;
+    width: unset !important;
+  }
+  
+  .buttons .class-5 {
+    background-color: #ffffff !important;
+    border: 2px solid !important;
+    border-color: #090459 !important;
+    width: unset !important;
+  }
+  
+  .buttons .class-6 {
+    background-color: #ffffff !important;
+    border: 2px solid !important;
+    border-color: #281fe2 !important;
+    width: unset !important;
+  }
+  
+  .buttons .class-7 {
+    background-color: #090459 !important;
+    width: unset !important;
+  }
+  
