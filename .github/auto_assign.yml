@@ -1,0 +1,14 @@
+# Set to true to add reviewers to pull requests
+addReviewers: true
+
+# A list of assignees, overrides reviewers if set
+reviewers:
+  - PmS-crypto
+  - PelumiTayo
+  - beatsnmelody
+  - khairahscorner
+
+numberOfReviewers: 0
+
+# Set to true to add assignees to pull requests
+addAssignees: author
