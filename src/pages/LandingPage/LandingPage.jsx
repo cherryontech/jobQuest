@@ -1,8 +1,6 @@
 import { Buttons } from "../../components/Buttons";
 import "./style.css";
 import finalHomepage from "../../assets/finalHomepage.png"
-import yellowBanner from "../../assets/yellowBanner.svg"
-
 
 export const LandingPage = () => {
   return (
