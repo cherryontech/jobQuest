@@ -6,6 +6,7 @@ function App() {
 
   return (
     <>
+        {/* this needs to be updated to set up routing between pages */}
       <h1>JobQuest</h1>
     </>
   )
