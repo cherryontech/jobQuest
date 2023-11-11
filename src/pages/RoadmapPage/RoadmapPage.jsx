@@ -1,17 +1,17 @@
 import { Buttons } from "../../components/Buttons";
 import "./style.css";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
 export const RoadmapPage = () => {
   return (
-    <div className="index">
-      <div className="div">
-        <div className="overlap">
-          <div className="page-BG" />
-          <div className="bottom-card-section">
-            <div className="overlap-group">
-              <div className="linear-path">
-                <div className="overlap-group-2">
-                  <div className="text-wrapper">Linear Path</div>
+    <div>
+      <Tabs>
+        <TabList>
+          <Tab>Free Flowing</Tab>
+          <Tab>Linear Path</Tab>
+        </TabList>
+        <TabPanel>
                   <img
                     className="line"
                     alt="Line"
@@ -21,18 +21,8 @@ export const RoadmapPage = () => {
                     Banish overwhelm. Complete each task one step at a time to
                     unlock the next step.
                   </p>
-                </div>
-              </div>
-              <div className="overlap-group-wrapper">
-                <div className="overlap-group-3">
-                  <div className="overlap-group-wrapper">
-                    <div className="overlap-group-3">
-                      <div className="rectangle" />
-                      <div className="rectangle-2" />
-                    </div>
-                  </div>
-                  <div className="free-flowing">
-                    <div className="text-wrapper-2">Free Flowing</div>
+                  </TabPanel>
+                  <TabPanel>
                     <img
                       className="img"
                       alt="Line"
@@ -42,12 +32,9 @@ export const RoadmapPage = () => {
                       Dip in and out and complete whatever tasks you like
                       whenever you want!
                     </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <img
+                    </TabPanel>
+      </Tabs>
+      <img
             className="JQ-final-colors"
             alt="Jq final colors"
             src="src/assets/RoadmapMascot.png"
@@ -62,7 +49,6 @@ export const RoadmapPage = () => {
               </div>
             </div>
           </div>
-        </div>
         <p className="advice-tips">Advice, Tips &amp; Actionable Steps</p>
         <p className="text-wrapper-5">
           All you need for job search success in one place!
@@ -92,6 +78,35 @@ export const RoadmapPage = () => {
           />
         </div>
       </div>
-    </div>
+    // <div className="index">
+    //   <div className="div">
+    //     <div className="overlap">
+    //       <div className="page-BG" />
+    //       <div className="bottom-card-section">
+    //         <div className="overlap-group">
+    //           <div className="linear-path">
+    //             <div className="overlap-group-2">
+    //               <div className="text-wrapper">
+    //               </div>
+                  
+    //             </div>
+    //           </div>
+    //           <div className="overlap-group-wrapper">
+    //             <div className="overlap-group-3">
+    //               <div className="overlap-group-wrapper">
+    //                 <div className="overlap-group-3">
+    //                   <div className="rectangle" />
+    //                   <div className="rectangle-2" />
+    //                 </div>
+    //               </div>
+    //               <div className="free-flowing">
+    //                 {/* <div className="text-wrapper-2">Free Flowing</div> */}
+                    
+    //               </div>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </div>
+         
   );
 };
