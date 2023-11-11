@@ -20,7 +20,7 @@ export const LandingPage = () => {
             <p className="text-wrapper-2">Your path to employment: streamlined job search guidance</p>
             <p className="text-wrapper-3">Feeling overwhelmed with job searching?</p>
           </div>
-          <Buttons buttonsSolidLargeText="Start Now" className="buttons-instance" property1="solid-large-blue" />
+          <Buttons buttonsSolidLargeText="Start Now" extraClasses="buttons-instance" property1="solid-large-blue" />
         </div>
       </div>
     </div>
