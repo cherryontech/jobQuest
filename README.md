@@ -1,14 +1,14 @@
 <div align="center" id="top">
   <a href="https://peachykeen-jobquest.netlify.app/">
-    <img src="https://ibb.co/3rCsvt4" alt="Jobquest Logo" width="300px" style="margin: 0 auto; display: block;" />
+    <img src="https://i.ibb.co/xC7sYVX/Job-Quest.png" alt="Jobquest Logo" width="300px" style="margin: 0 auto; display: block;" />
   </a>
 </div>
 
-![Jobquest logo]
-(https://ibb.co/3rCsvt4)
+<br/>
 
 **Job Quest** is a platform designed to simplify the job search process for jobseekers, addressing the challenges they face when entering the competitive job market. By providing a structured roadmap, actionable tasks, and valuable resources, Job Quest empowers jobseekers to secure meaningful employment opportunities and launch their careers with confidence.
 
+<br/>
 
 🌐 [Live Site](https://peachykeen-jobquest.netlify.app/)
 
