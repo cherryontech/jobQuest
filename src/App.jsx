@@ -1,15 +1,21 @@
-// import finalHomepage from './assets/finalHomepage.png'
-// import yellowBanner from './assets/yellowBanner.svg'
-import './App.css'
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { LandingPage } from "./pages/LandingPage";
+import { LoginPage } from "./pages/Login";
 
 function App() {
-
   return (
     <>
-        {/* this needs to be updated to set up routing between pages */}
-      <h1>JobQuest</h1>
+      <Router>
+        <Routes>
+          <>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/login" element={<LoginPage />} />
+          </>
+        </Routes>
+      </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
