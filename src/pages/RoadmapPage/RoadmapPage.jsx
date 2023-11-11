@@ -15,7 +15,7 @@ export const RoadmapPage = () => {
                   <img
                     className="line"
                     alt="Line"
-                    src="https://cdn.animaapp.com/projects/652ee00b2873525a7a887798/releases/654f0413f197b5633923a301/img/line-1-1.svg"
+                    src="src/assets/Line.png"
                   />
                   <p className="p">
                     Banish overwhelm. Complete each task one step at a time to
@@ -36,7 +36,7 @@ export const RoadmapPage = () => {
                     <img
                       className="img"
                       alt="Line"
-                      src="https://cdn.animaapp.com/projects/652ee00b2873525a7a887798/releases/654f0413f197b5633923a301/img/line-2.svg"
+                      src="src/assets/Line.png"
                     />
                     <p className="text-wrapper-3">
                       Dip in and out and complete whatever tasks you like
@@ -57,38 +57,8 @@ export const RoadmapPage = () => {
           <div className="cards">
             <div className="cards-2">
               <div className="top-row">
-                <img
-                  className="img-2"
-                  alt="Linked in"
-                  src="https://cdn.animaapp.com/projects/652ee00b2873525a7a887798/releases/654f0413f197b5633923a301/img/linkedin@2x.png"
-                />
-                <img
-                  className="img-3"
-                  alt="Resume"
-                  src="https://cdn.animaapp.com/projects/652ee00b2873525a7a887798/releases/654f0413f197b5633923a301/img/resume@2x.png"
-                />
-                <img
-                  className="img-4"
-                  alt="Interview"
-                  src="https://cdn.animaapp.com/projects/652ee00b2873525a7a887798/releases/654f0413f197b5633923a301/img/interview@2x.png"
-                />
               </div>
               <div className="second-row">
-                <img
-                  className="img-2"
-                  alt="Portfolio"
-                  src="https://cdn.animaapp.com/projects/652ee00b2873525a7a887798/releases/654f0413f197b5633923a301/img/portfolio@2x.png"
-                />
-                <img
-                  className="img-3"
-                  alt="Application"
-                  src="https://cdn.animaapp.com/projects/652ee00b2873525a7a887798/releases/654f0413f197b5633923a301/img/application@2x.png"
-                />
-                <img
-                  className="img-4"
-                  alt="Job search"
-                  src="https://cdn.animaapp.com/projects/652ee00b2873525a7a887798/releases/654f0413f197b5633923a301/img/job-search@2x.png"
-                />
               </div>
             </div>
           </div>
@@ -118,7 +88,7 @@ export const RoadmapPage = () => {
           <img
             className="image"
             alt="Image"
-            src="https://cdn.animaapp.com/projects/652ee00b2873525a7a887798/releases/652ee11aca99ad1e375e6c86/img/image-2.png"
+            src="src/assets/RoadmapImage.png"
           />
         </div>
       </div>
