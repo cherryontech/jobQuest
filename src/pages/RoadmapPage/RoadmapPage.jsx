@@ -50,7 +50,7 @@ export const RoadmapPage = () => {
           <img
             className="JQ-final-colors"
             alt="Jq final colors"
-            src="https://cdn.animaapp.com/projects/652ee00b2873525a7a887798/releases/654f0413f197b5633923a301/img/jq-final-colors-1@2x.png"
+            src="src/assets/RoadmapMascot.png"
           />
           <div className="text-wrapper-4">Choose your learning style:</div>
           <div className="ellipse" />
