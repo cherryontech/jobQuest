@@ -4,6 +4,9 @@
   </a>
 </div>
 
+![Jobquest logo]
+(https://ibb.co/3rCsvt4)
+
 **Job Quest** is a platform designed to simplify the job search process for jobseekers, addressing the challenges they face when entering the competitive job market. By providing a structured roadmap, actionable tasks, and valuable resources, Job Quest empowers jobseekers to secure meaningful employment opportunities and launch their careers with confidence.
 
 
@@ -14,10 +17,6 @@
 ### Dev tools
 <div>
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-  <img src='https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E' />
-  <img src="https://img.shields.io/static/v1?style=for-the-badge&message=React+Router&color=CA4245&logo=React+Router&logoColor=FFFFFF&label=">
-  <img src='https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white' />
-  <img src='https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white' />
   <img src='https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white' />
    <img src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white" />
   <img src='https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white' />
@@ -29,7 +28,7 @@
 <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" />
 </div>
 
-### Product Management tools
+### Product Management tool
 <div>
   <img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=Jira&logoColor=white" />
 </div>
@@ -44,7 +43,7 @@
 
 ### Dev Mentor 
 
-[Airah](https://github.com/khairahscorner)
+- [Airah](https://github.com/khairahscorner)
 
 ### Designers:
 
@@ -54,14 +53,12 @@
 ### Product Manager:
 
 - [Bola](mailto:fowosere@ualberta.ca)
-- [Tanisha](maito:tanisha_nigam@yahoo.ca)
+- [Tanisha](maito:tanishanigam@yahoo.ca)
 
 ## Getting Started
 
 1. Clone the repository:
    ```bash
-   git clone git@github.com:cherryontech/jobQuest.git
-   or
    git clone https://github.com/cherryontech/jobQuest.git
 2. Navigate to the project:
    ```bash
@@ -72,7 +69,6 @@
 4. Start the development server:
    ``` bash
    npm run dev
-
 
 ## Contribution
 To contribute to this project, please follow [these](https://github.com/cherryontech/jobQuest/blob/main/docs/contributing.md) steps
