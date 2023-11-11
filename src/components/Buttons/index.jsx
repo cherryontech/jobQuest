@@ -1,13 +1,12 @@
 import PropTypes from "prop-types";
-import React from "react";
 import { ButtonsSolidLarge } from "../ButtonsSolidLarge";
 import "./style.css";
 
-export const Buttons = ({ property1, className, buttonsSolidLargeText = "Start Free" }) => {
+export const Buttons = ({ property1, extraClasses, buttonsSolidLargeText = "Start Free" }) => {
   return (
-    <div className={`buttons ${className}`}>
+    <div className={`buttons ${extraClasses}`}>
       <ButtonsSolidLarge
-        className={`${
+        extraClasses={`${
           property1 === "hover"
             ? "class-4"
             : property1 === "outline"
@@ -16,7 +15,7 @@ export const Buttons = ({ property1, className, buttonsSolidLargeText = "Start F
             ? "class-6"
             : "class-7"
         }`}
-        divClassName={`${property1 === "outline" ? "class" : property1 === "outlined-hover" ? "class-2" : "class-3"}`}
+        divClasses={`${property1 === "outline" ? "class" : property1 === "outlined-hover" ? "class-2" : "class-3"}`}
         text={buttonsSolidLargeText}
       />
     </div>
@@ -26,4 +25,5 @@ export const Buttons = ({ property1, className, buttonsSolidLargeText = "Start F
 Buttons.propTypes = {
   property1: PropTypes.oneOf(["outlined-hover", "solid-large-blue", "outline", "hover"]),
   buttonsSolidLargeText: PropTypes.string,
+  extraClasses: PropTypes.string
 };
