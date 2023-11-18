@@ -57,17 +57,25 @@ export const LoginPage = () => {
       const email = localStorage.getItem("jobQuestEmail");
       const password = localStorage.getItem("jobQuestPassword");
 
-      //if the result email and password field are equal to values saved in localStorage, then the user is authenticated.
-      if (email === result.email && password === result.password) {
-        navigateTo("../Roadmap");
-      } else {
-        const field = "loginFailed";
-        setErrors((prev) => ({
-          ...prev,
-          [field]: "Incorrect Username/Password",
-        }));
+      //if user credentials has not been previously stored to localStorage, store and still log them in
+      if (!email || !password) {
+        localStorage.setItem("jobQuestEmail", result.email);
+        localStorage.setItem("jobQuestPassword", result.email);
+        navigateTo("/roadmap");
       }
-      setIsLoading(false);
+      //else, check if they are equal to values saved in localStorage
+      else {
+        if (email === result.email && password === result.password) {
+          navigateTo("/roadmap");
+        } else {
+          const field = "loginFailed";
+          setErrors((prev) => ({
+            ...prev,
+            [field]: "Incorrect Username/Password",
+          }));
+        }
+        setIsLoading(false);
+      }
     } catch (err) {
       for (const e of err.inner) {
         let field = e.path;
@@ -161,7 +169,11 @@ export const LoginPage = () => {
           <div className="text-red-500 text-right">{errors.loginFailed}</div>
         )}
         <p className="text-left m-2">
-          Forgot your password? <span className="text-red-500"> Reset</span>
+          Forgot your password?{" "}
+          <span className="text-red-500 cursor-pointer underline font-bold">
+            {" "}
+            Reset
+          </span>
         </p>
         <Button
           onClick={handleSubmit}
@@ -175,7 +187,11 @@ export const LoginPage = () => {
           Log In
         </Button>
         <p className=" m-2">
-          Need an account? <span className="text-red-500"> Create Account</span>
+          Need an account?{" "}
+          <span className="text-red-500 cursor-pointer underline font-bold">
+            {" "}
+            Create Account
+          </span>
         </p>
       </div>
     </div>
