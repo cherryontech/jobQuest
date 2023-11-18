@@ -1,11 +1,16 @@
 "use client";
 import React from "react";
-import { object, string } from "yup";
-import { Image, Input, Button } from "@nextui-org/react";
-import authBackground from "../../assets/authBackground.png";
 import { useNavigate } from "react-router-dom";
+
+//for field validation
+import { object, string } from "yup";
+
+//nextUI components
+import { Image, Input, Button } from "@nextui-org/react";
 import { EyeFilledIcon } from "./EyeFilledIcon";
 import { EyeSlashFilledIcon } from "./EyeSlashFilledIcon";
+
+import authBackground from "../../assets/authBackground.png";
 
 let userSchema = object({
   email: string()
@@ -23,9 +28,15 @@ export const LoginPage = () => {
     email: "",
     password: "",
   });
+
+  //used to shwo or not show password.
   const [isVisible, setIsVisible] = React.useState(false);
+
+  //form loading
   const [isLoading, setIsLoading] = React.useState(false);
   const [errors, setErrors] = React.useState({});
+
+  //Router navigation
   const navigateTo = useNavigate();
 
   React.useEffect(() => {
@@ -41,12 +52,14 @@ export const LoginPage = () => {
   async function handleSubmit() {
     try {
       setIsLoading(true);
-      result = await userSchema.validate(userInfo, { abortEarly: false });
-      console.log(result);
+      let result = await userSchema.validate(userInfo, { abortEarly: false });
+
       const email = localStorage.getItem("jobQuestEmail");
       const password = localStorage.getItem("jobQuestPassword");
-      if (email === userInfo.email && password === userInfo.password) {
-        navigateTo("Ratings");
+
+      //if the result email and password field are equal to values saved in localStorage, then the user is authenticated.
+      if (email === result.email && password === result.password) {
+        navigateTo("../Roadmap");
       } else {
         const field = "loginFailed";
         setErrors((prev) => ({
@@ -56,8 +69,6 @@ export const LoginPage = () => {
       }
       setIsLoading(false);
     } catch (err) {
-      console.log("here");
-      console.log(err.inner);
       for (const e of err.inner) {
         let field = e.path;
         let errmsg = e.errors[0];
@@ -87,8 +98,13 @@ export const LoginPage = () => {
           height: "500px",
         }}
       >
-<Button className="h-5 inline bg-transparent float-right" onClick={() => navigateTo('/')}>X</Button>
-<br />
+        <Button
+          className="h-5 inline bg-transparent float-right font-bold text-1xl"
+          onClick={() => navigateTo("/")}
+        >
+          X
+        </Button>
+        <br />
         <h1
           className="text-4xl font-bold"
           style={{
