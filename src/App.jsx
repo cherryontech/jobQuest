@@ -3,11 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { LandingPage } from "./pages/LandingPage";
 import { LoginPage } from "./pages/Login";
 import { RoadmapPage } from "./pages/RoadmapPage";
-import { NextUIProvider } from "@nextui-org/react";
 
 function App() {
   return (
-    <NextUIProvider>
       <Router>
         <Routes>
           <>
@@ -17,7 +15,6 @@ function App() {
           </>
         </Routes>
       </Router>
-    </NextUIProvider>
   );
 }
 

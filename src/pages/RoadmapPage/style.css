@@ -376,6 +376,7 @@
  
   .tab {
     position: absolute;
-    top: 1100px;
+    top: 80px;
+    z-index: 1;
   }
   
