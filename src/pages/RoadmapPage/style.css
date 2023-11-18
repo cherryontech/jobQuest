@@ -135,7 +135,7 @@
     left: 48px;
     position: absolute;
     top: 30px;
-    width: 389px;
+    width: 390px;
   }
   
   .index .text-wrapper-2 {
@@ -148,16 +148,17 @@
     line-height: normal;
     position: absolute;
     text-align: center;
-    top: 0;
-    width: 266px;
+    top: 980;
+    width: 306px;
   }
   
   .index .img {
     height: 2px;
-    left: 0;
+    left: 780px;
     position: absolute;
     top: 64px;
-    width: 385px;
+    width: 634px;
+    height: 552px;
   }
   
   .index .text-wrapper-3 {
@@ -165,12 +166,13 @@
     font-family: "Inter", Helvetica;
     font-size: 20px;
     font-weight: 300;
-    left: 0;
+    left: 30px;
+    text-align: center;
     letter-spacing: 0;
     line-height: 24px;
     position: absolute;
-    top: 88px;
-    width: 360px;
+    top: 175px;
+    width: 700px;
   }
   
   .index .JQ-final-colors {
@@ -269,7 +271,8 @@
     line-height: 65px;
     position: absolute;
     top: 212px;
-    width: 375px;
+    width: 340px;
+    text-align: left;
   }
   
   .index .text-wrapper-5 {
@@ -282,8 +285,9 @@
     line-height: 34px;
     position: absolute;
     top: 499px;
-    white-space: nowrap;
+    white-space: wrap;
     width: 426px;
+    text-align: left
   }
   
   .index .top-nav-bar {
@@ -358,7 +362,7 @@
     left: 697px;
     position: absolute;
     top: 88px;
-    width: 743px;
+    /* width: 743px; */
   }
   
   .index .image {
@@ -368,5 +372,10 @@
     position: absolute;
     top: 17px;
     width: 634px;
+  }
+ 
+  .tab {
+    position: absolute;
+    top: 1100px;
   }
   
