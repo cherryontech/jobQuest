@@ -11,11 +11,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function TCard({ subCard, index }) {
-
+  //for dropdown
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <div key={index} className="flex justify-around m-5" >
+    <div key={index} className="flex justify-around m-5 ">
       <Checkbox size="lg" color="danger" className="text-white" />
       <Card
         shadow="none"
@@ -46,7 +46,7 @@ export default function TCard({ subCard, index }) {
         {isVisible && (
           <>
             <Divider style={{ border: "1px solid #D9E2F3" }} />
-            <CardBody className="py-10 px-5">
+            <CardBody className="py-10 px-5 ">
               {subCard.description.map((desc, descIndex) => (
                 <div key={descIndex}>
                   <p>{desc}</p>
