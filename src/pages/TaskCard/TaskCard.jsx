@@ -1,15 +1,8 @@
 import React from "react";
-import {
-  Card,
-  Image,
-  CardHeader,
-  CardBody,
-  Checkbox,
-  Divider,
-  Button,
-} from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 import mascot from "../../assets/finalHomepage.png";
 import tcard from "./TaskCard.json";
+import TCard from "./Card";
 
 export default function TaskCard() {
   return (
@@ -33,7 +26,15 @@ export default function TaskCard() {
       <div className="p-10" style={{ backgroundColor: "#D9E2F3" }}>
         <div className="w-4/5 m-auto px-20">
           {/* TODO: need to dynamically render path */}
-          <p className="text-gray-700 opacity-50 mb-10">Home / Linear</p>
+          <p className="text-gray-700 opacity-50 mb-10">
+            <span className="hover:text-[#FF6667] hover:opacity-100 hover:cursor-pointer">
+              Home
+            </span>{" "}
+            /{" "}
+            <span className="hover:text-[#FF6667] hover:opacity-100 hover:cursor-pointer">
+              Linear Path
+            </span>
+          </p>
           <br />
           <h1 className="text-4xl font-bold mb-1" style={{ color: "#2C2C2C" }}>
             LinkedIn Profile
@@ -49,32 +50,7 @@ export default function TaskCard() {
           style={{ borderRadius: "30px" }}
         >
           {tcard.Linkedin.map((subCard, index) => (
-            <div key={index} className="flex justify-around m-5">
-              <Checkbox size="lg" color="danger" className="w-1/6" />
-
-              <Card className="w-5/6">
-                <CardHeader className="flex gap-3">
-                  <p className="text-md font-bold">{subCard.title}</p>
-                </CardHeader>
-                <Divider />
-                <CardBody>
-                  {subCard.description.map((desc, descIndex) => (
-                    <div key={descIndex}>
-                      <p>{desc}</p>
-                      {descIndex !== subCard.description.length - 1 && <br />}
-                    </div>
-                  ))}
-                  <br />
-                  {subCard.button && (
-                    <Button className="bg-[#FF6667] text-white w-1/6">
-                      {subCard.button}
-                    </Button>
-                  )}
-                </CardBody>
-
-                <Divider />
-              </Card>
-            </div>
+            <TCard subCard={subCard} index={index} />
           ))}
         </div>
       </div>
