@@ -1,12 +1,14 @@
 .buttons {
     height: 54px;
     width: 280px;
+    cursor:pointer;
   }
   
   .buttons .class {
     color: #090459 !important;
     font-weight: 700 !important;
     top: 12px !important;
+    cursor:pointer;
   }
   
   .buttons .class-2 {
@@ -17,11 +19,13 @@
   
   .buttons .class-3 {
     font-weight: 700 !important;
+    cursor:pointer;
   }
   
   .buttons .class-4 {
     background-color: #281fe2 !important;
     width: unset !important;
+    cursor:pointer;
   }
   
   .buttons .class-5 {
@@ -29,6 +33,7 @@
     border: 2px solid !important;
     border-color: #090459 !important;
     width: unset !important;
+    cursor:pointer;
   }
   
   .buttons .class-6 {
@@ -36,10 +41,12 @@
     border: 2px solid !important;
     border-color: #281fe2 !important;
     width: unset !important;
+    cursor:pointer;
   }
   
   .buttons .class-7 {
     background-color: #090459 !important;
     width: unset !important;
+    cursor:pointer;
   }
   
