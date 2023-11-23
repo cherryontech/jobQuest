@@ -39,7 +39,14 @@ export const RoadmapPage = () => {
                   Banish overwhelm. Complete each task one step at a time to
                   unlock the next step.
                 </p> */}
-                <FreeflowingCard cardName={"Linkedin"}/>
+                <div className="freeflowing-card-grid">
+                <FreeflowingCard cardName={"Linkedin"} className="freeflowing-card" />
+                <FreeflowingCard cardName={"Resume"} className="freeflowing-card"/>
+                <FreeflowingCard cardName={"Interview Prep"} className="freeflowing-card"/>
+                <FreeflowingCard cardName={"Application Advice"} className="freeflowing-card"/>
+                <FreeflowingCard cardName={"Job Searching Tips"} className="freeflowing-card"/>
+                <FreeflowingCard cardName={"Bonus Tasks"} className="freeflowing-card"/>
+                </div>
               </TabPanel>
               <TabPanel>
                 {/* <p className="text-wrapper-3">

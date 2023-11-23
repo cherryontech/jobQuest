@@ -5,7 +5,7 @@
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
-    line-height: 24px; /* 75% */
+    line-height: 34px; /* 75% */
     letter-spacing: 1.6px;
     word-wrap: 'break-word';
     position: relative;
@@ -23,6 +23,7 @@
     width: 240px;
     height: 240px;
     flex-shrink: 0;
+    margin: 20px;
   }
   
   .card-div:hover {

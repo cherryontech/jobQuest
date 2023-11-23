@@ -3,7 +3,7 @@ import {
     Card,
     CardBody,
 } from "@nextui-org/react";
-import { PercentageScore } from "../../components/PerecentageScore";
+import { PercentageScore } from "../PercentageScore";
 import "./style.css";
 
 export const FreeflowingCard = ({cardName}) => {

@@ -397,3 +397,14 @@
   top: 17px;
   width: 634px;
 }
+
+.freeflowing-card-grid {
+  display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: space-between;;
+}
+
+.freeflowing-card {
+  flex: 1 0 30%;
+}
