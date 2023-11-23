@@ -1,7 +1,7 @@
 import React from "react";
 import { Buttons } from "../../components/Buttons";
 import "./style.css";
-import { Card, CardFooter, Image, Button } from "@nextui-org/react";
+import { FreeflowingCard } from "../../components/FreeflowingCard";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
@@ -29,25 +29,23 @@ export const RoadmapPage = () => {
 
         <div className="bottom-card-section">
           <div className="overlap-group">
-     
-
             <Tabs>
               <TabList>
                 <Tab>Free Flowing</Tab>
                 <Tab>Linear Path</Tab>
               </TabList>
               <TabPanel>
-                <p className="text-wrapper-3">
+                {/* <p className="text-wrapper-3">
                   Banish overwhelm. Complete each task one step at a time to
                   unlock the next step.
-                </p>
-               
+                </p> */}
+                <FreeflowingCard cardName={"Linkedin"}/>
               </TabPanel>
               <TabPanel>
-                <p className="text-wrapper-3">
+                {/* <p className="text-wrapper-3">
                   Dip in and out and complete whatever tasks you like whenever
                   you want!
-                </p>
+                </p> */}
               </TabPanel>
             </Tabs>
           </div>

@@ -1,0 +1,31 @@
+.card-name {
+    color: #25274c;
+    text-align: center;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 75% */
+    letter-spacing: 1.6px;
+    word-wrap: 'break-word';
+    position: relative;
+    top: 44%;
+    transform: translateY(-50%);
+  }
+  .card-div {
+    border-radius: 24px;
+    border: 2px solid #ff6667;
+    background: linear-gradient(
+      180deg,
+      rgba(247, 216, 217, 0.4) 42.08%,
+      rgba(21, 131, 255, 0.2) 100%
+    );
+    width: 240px;
+    height: 240px;
+    flex-shrink: 0;
+  }
+  
+  .card-div:hover {
+    box-shadow: -4px 7px 4px #1910A5;
+  }
+  
