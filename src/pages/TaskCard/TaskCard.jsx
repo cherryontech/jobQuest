@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Image } from "@nextui-org/react";
+import { Image, CircularProgress } from "@nextui-org/react";
 import mascot from "../../assets/finalHomepage.png";
 import { useNavigate } from "react-router-dom";
 import tcard from "./TaskCard.json";
@@ -7,7 +7,20 @@ import TCard from "./Card";
 
 export default function TaskCard() {
   const [resource, setResource] = useState({});
-  const navigateTo = useNavigate() 
+  const [value, setValue] = React.useState(50);
+  const navigateTo = useNavigate();
+
+  //percentage of tasks the user has completed
+  useEffect(() => {
+    let i = 0;
+    for (const key in resource) {
+      if (resource[key]) {
+        i += 1;
+      }
+      const percent = (i / tcard.Linkedin.length) * 100;
+      setValue(percent);
+    }
+  }, [resource]);
 
   useEffect(() => {
     const fetchResourceInfo = () => {
@@ -15,10 +28,6 @@ export default function TaskCard() {
       //on initial render set the key/value pairs of cards in localStorage
       if (!res) {
         res = {};
-        for (let i = 0; i < tcard.Linkedin.length; i++) {
-          res[`ind${i}`] = false;
-        }
-        setResource(res);
         localStorage.setItem("linkedin", JSON.stringify(res));
       } else {
         //else grab what's already in localStorage and render
@@ -51,11 +60,17 @@ export default function TaskCard() {
         <div className="w-4/5 m-auto px-20">
           {/* TODO: need to dynamically render path */}
           <p className="text-gray-700 opacity-50 mb-10">
-            <span className="hover:text-[#FF6667] hover:opacity-100 hover:cursor-pointer" onClick={() => navigateTo("/")}>
+            <span
+              className="hover:text-[#FF6667] hover:opacity-100 hover:cursor-pointer"
+              onClick={() => navigateTo("/")}
+            >
               Home
             </span>{" "}
             /{" "}
-            <span className="hover:text-[#FF6667] hover:opacity-100 hover:cursor-pointer" onClick={() => navigateTo("/roadmap")}>
+            <span
+              className="hover:text-[#FF6667] hover:opacity-100 hover:cursor-pointer"
+              onClick={() => navigateTo("/roadmap")}
+            >
               Linear Path
             </span>
           </p>
@@ -74,6 +89,16 @@ export default function TaskCard() {
           className="w-5/6 m-auto bg-white p-2"
           style={{ borderRadius: "30px" }}
         >
+          <div className=" m-5 flex justify-end px-20">
+            <CircularProgress
+              aria-label="Task Percentage"
+              size="lg"
+              value={value}
+              color="danger"
+              className="font-bold"
+              showValueLabel={true}
+            />
+          </div>
           {/* TODO: Need to dynamically render resource here */}
           {tcard.Linkedin.map((subCard, index) => (
             <TCard
@@ -81,7 +106,7 @@ export default function TaskCard() {
               subCard={subCard}
               index={index}
               resource={resource}
-              checked={resource[`ind${index}`]}
+              checked={resource[`card${index}`]}
               setResource={setResource}
             />
           ))}
