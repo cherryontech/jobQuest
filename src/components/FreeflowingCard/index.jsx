@@ -1,7 +1,7 @@
+import PropTypes from "prop-types";
 import {
     Card,
     CardBody,
-    card,
 } from "@nextui-org/react";
 import { PercentageScore } from "../../components/PerecentageScore";
 import "./style.css";
@@ -20,3 +20,7 @@ export const FreeflowingCard = ({cardName}) => {
                 </Card>
     )
 }
+
+FreeflowingCard.propTypes = {
+    cardName: PropTypes.string
+  };
