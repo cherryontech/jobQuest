@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Card,
   CardHeader,
@@ -10,13 +10,40 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
-export default function TCard({ subCard, index }) {
+export default function TCard({
+  setResource,
+  resource,
+  subCard,
+  index,
+  checked,
+}) {
   //for dropdown
   const [isVisible, setIsVisible] = useState(false);
+  const [isChecked, setIsChecked] = useState(checked);
+
+  //updates checked after initial render of task page
+  useEffect(() => {
+    setIsChecked(checked);
+  }, [checked]);
+
+  const handleCheckboxChange = (key) => (event) => {
+    setIsChecked(!isChecked)
+    //update new state change within object
+    const updatedInfo = { ...resource, [key]: event };
+    setResource(updatedInfo);
+    //update localStorage with updated information 
+    localStorage.setItem("linkedin", JSON.stringify(updatedInfo));
+  };
 
   return (
     <div key={index} className="flex justify-around m-5 ">
-      <Checkbox size="lg" color="danger" className="text-white" />
+      <Checkbox
+        isSelected={isChecked}
+        onValueChange={handleCheckboxChange(`ind${index}`)}
+        size="lg"
+        color="danger"
+        className="text-white"
+      />
       <Card
         shadow="none"
         className="w-5/6"
