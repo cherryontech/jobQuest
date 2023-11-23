@@ -29,45 +29,7 @@ export const RoadmapPage = () => {
 
         <div className="bottom-card-section">
           <div className="overlap-group">
-            {/* <div className="free-flowing">
-              <Tabs className="tab text-wrapper-2">
-                <TabList>
-                  <Tab className="tab-title">Free Flowing</Tab>
-                  <Tab className="tab-title text-wrapper">Linear Path</Tab>
-                </TabList>
-                <TabPanel>
-                  <img alt="Line" src="src/assets/Line.png" />
-                  <p className="text-wrapper-3">
-                    Banish overwhelm. Complete each task one step at a time to
-                    unlock the next step.
-                  </p>
-                  
-                </TabPanel>
-                <TabPanel className="linear-path">
-                  <img alt="Line" src="src/assets/Line.png" />
-                  <p className="text-wrapper-3">
-                    Dip in and out and complete whatever tasks you like whenever
-                    you want!
-                  </p>
-                </TabPanel>
-              </Tabs>
-  </div> */}
-
-            {/* <div className="overlap-group-wrapper">
-              
-              <div className="overlap-group-3">
-                <div className="overlap-group-wrapper">
-              
-                  <div className="overlap-group-3">
-                    <div className="rectangle" />
-                    <div className="rectangle-2" />
-                    <div className="reactangle-back" />
-                  </div>
-
-                </div>
-              </div>
-
-            </div> */}
+     
 
             <Tabs>
               <TabList>
