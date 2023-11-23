@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { ButtonsSolidLarge } from "../ButtonsSolidLarge";
 import "./style.css";
 
-export const Buttons = ({ property1, extraClasses, buttonsSolidLargeText = "Start Free" }) => {
+export const Buttons = ({ property1, extraClasses, buttonsSolidLargeText = "Start Free"}) => {
   return (
     <div className={`buttons ${extraClasses}`}>
       <ButtonsSolidLarge

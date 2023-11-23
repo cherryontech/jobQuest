@@ -1,4 +1,4 @@
-.index {
+  .index {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
@@ -13,16 +13,73 @@
     position: relative;
     width: 1440px;
   }
-  
-  .index .overlap {
-    height: 1601px;
-    left: 0;
+
+  .advice-tips {
+    color: #ff6667;
+    font-family: "Inter", Helvetica;
+    font-size: 64px;
+    font-weight: 800;
+    left: 232px;
+    letter-spacing: -1.28px;
+    line-height: 65px;
     position: absolute;
-    top: 660px;
-    width: 1444px;
+    top: 212px;
+    width: 340px;
+    text-align: left;
+  }
+
+  .header-sub-text {
+    color: #24264c;
+    font-family: "Lato", Helvetica;
+    font-size: 36px;
+    font-weight: 300;
+    left: 232px;
+    letter-spacing: 0;
+    line-height: 34px;
+    position: absolute;
+    top: 499px;
+    white-space: wrap;
+    width: 426px;
+    text-align: left
   }
   
-  .index .page-BG {
+  .top-nav-bar {
+    height: 84px;
+    left: 4px;
+    position: absolute;
+    top: 0;
+    width: 1440px;
+  }
+
+  .top-nav-bar-2 {
+    height: 84px;
+    position: relative;
+  }
+
+  .nav-text {
+    color: #001561;
+    font-family: "Lato", Helvetica;
+    font-size: 32px;
+    font-weight: 800;
+    left: 228px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    text-align: center;
+    top: 29px;
+    white-space: nowrap;
+  }
+
+  .img {
+    height: 2px;
+    left: 670px;
+    position: absolute;
+    top: 64px;
+    width: 743px;
+    height: 552px;
+  }
+
+  .page-BG {
     background: linear-gradient(180deg, rgb(216.64, 225.93, 242.96) 18.34%, rgb(244, 244, 248) 100%);
     height: 1601px;
     left: 0;
@@ -31,7 +88,23 @@
     width: 1440px;
   }
   
-  .index .bottom-card-section {
+  .JQ-final-colors {
+    height: 435px;
+    left: 1069px;
+    position: absolute;
+    top: 1054px;
+    width: 371px;
+  }
+
+  .overlap {
+    height: 1601px;
+    left: 0;
+    position: absolute;
+    top: 660px;
+    width: 1440px;
+  }
+ 
+  .bottom-card-section {
     height: 908px;
     left: 244px;
     position: absolute;
@@ -39,27 +112,26 @@
     width: 952px;
   }
   
-  .index .overlap-group {
-    height: 908px;
-    position: relative;
-    width: 956px;
-  }
-  
-  .index .linear-path {
-    height: 908px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 956px;
-  }
-  
-  .index .overlap-group-2 {
-    background-color: #f5f6f8;
-    border-radius: 24px;
+  .overlap-group {
     height: 908px;
     position: relative;
     width: 952px;
   }
+
+  .free-flowing {
+    height: 143px;
+    left: 48px;
+    position: absolute;
+    top: 30px;
+    width: 390px;
+  }
+
+  .tab {
+    position: absolute;
+    top: 80px;
+    z-index: 1;
+  }
+  
   
   .index .text-wrapper {
     color: #25274c;
@@ -71,9 +143,30 @@
     line-height: normal;
     position: absolute;
     text-align: center;
-    top: 30px;
+    top: 0px;
     white-space: nowrap;
     width: 240px;
+  }
+
+  .index .text-wrapper-2 {
+    color: #25274c;
+    font-family: "Inter", Helvetica;
+    font-size: 42px;
+    font-weight: 700;
+    left: 60px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    width: 306px;
+  }
+  .index .linear-path {
+    height: 908px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 956px;
   }
   
   .index .line {
@@ -83,6 +176,41 @@
     top: 94px;
     width: 385px;
   }
+
+  .rectangle {
+    background-color: #ffffff;
+    border-radius: 0px 0px 24px 24px;
+    height: 712px;
+    left: 0;
+    position: absolute;
+    top: 196px;
+    width: 952px;
+  }
+
+  /* .rectangle-back {
+    background-color: #f5f7f8;
+    border-radius: 24px;
+    height: 712px;
+    left: 0;
+    position: absolute;
+    top: 0px;
+    width: 952px;
+    z-index: -1
+  } */
+
+  /* .overlap-group-2 {
+    background-color: #f5f7f8;
+    border-radius: 24px;
+    height: 712px;
+    left: 0;
+    position: absolute;
+    top: 0px;
+    width: 952px;
+    z-index: -1;
+  } */
+
+
+
   
   .index .p {
     color: #25274c;
@@ -110,17 +238,20 @@
     position: relative;
   }
   
-  .index .rectangle {
+ 
+  
+  .rectangle-2 {
     background-color: #ffffff;
-    border-radius: 0px 0px 24px 24px;
-    height: 712px;
+    border-radius: 24px 24px 0px 0px;
+    height: 196px;
     left: 0;
     position: absolute;
-    top: 196px;
-    width: 952px;
+    top: 0;
+    width: 476px;
+    z-index: -1;
   }
   
-  .index .rectangle-2 {
+  .rectangle-3 {
     background-color: #ffffff;
     border-radius: 24px 24px 0px 0px;
     height: 196px;
@@ -130,36 +261,6 @@
     width: 476px;
   }
   
-  .index .free-flowing {
-    height: 143px;
-    left: 48px;
-    position: absolute;
-    top: 30px;
-    width: 390px;
-  }
-  
-  .index .text-wrapper-2 {
-    color: #25274c;
-    font-family: "Inter", Helvetica;
-    font-size: 42px;
-    font-weight: 700;
-    left: 60px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 980;
-    width: 306px;
-  }
-  
-  .index .img {
-    height: 2px;
-    left: 780px;
-    position: absolute;
-    top: 64px;
-    width: 634px;
-    height: 552px;
-  }
   
   .index .text-wrapper-3 {
     color: #25274c;
@@ -172,16 +273,9 @@
     line-height: 24px;
     position: absolute;
     top: 175px;
-    width: 700px;
+    width: 300px;
   }
   
-  .index .JQ-final-colors {
-    height: 435px;
-    left: 1069px;
-    position: absolute;
-    top: 1054px;
-    width: 371px;
-  }
   
   .index .text-wrapper-4 {
     color: #24264c;
@@ -193,20 +287,11 @@
     line-height: 60px;
     position: absolute;
     text-align: center;
-    top: 127px;
+    top: 93px;
     white-space: nowrap;
     width: 870px;
   }
   
-  .index .ellipse {
-    background-color: #eff1f8;
-    border-radius: 23.5px/19.5px;
-    height: 39px;
-    left: 1397px;
-    position: absolute;
-    top: 1150px;
-    width: 47px;
-  }
   
   .index .cards {
     height: 811px;
@@ -261,62 +346,6 @@
     width: 848px;
   }
   
-  .index .advice-tips {
-    color: #ff6667;
-    font-family: "Inter", Helvetica;
-    font-size: 64px;
-    font-weight: 800;
-    left: 232px;
-    letter-spacing: -1.28px;
-    line-height: 65px;
-    position: absolute;
-    top: 212px;
-    width: 340px;
-    text-align: left;
-  }
-  
-  .index .text-wrapper-5 {
-    color: #24264c;
-    font-family: "Lato", Helvetica;
-    font-size: 36px;
-    font-weight: 300;
-    left: 232px;
-    letter-spacing: 0;
-    line-height: 34px;
-    position: absolute;
-    top: 499px;
-    white-space: wrap;
-    width: 426px;
-    text-align: left
-  }
-  
-  .index .top-nav-bar {
-    height: 84px;
-    left: 4px;
-    position: absolute;
-    top: 0;
-    width: 1440px;
-  }
-  
-  .index .top-nav-bar-2 {
-    height: 84px;
-    position: relative;
-  }
-  
-  .index .text-wrapper-6 {
-    color: #001561;
-    font-family: "Lato", Helvetica;
-    font-size: 32px;
-    font-weight: 800;
-    left: 228px;
-    letter-spacing: 0;
-    line-height: 20px;
-    position: absolute;
-    text-align: center;
-    top: 29px;
-    white-space: nowrap;
-  }
-  
   .index .buttons-for-sign-up {
     height: 32px;
     left: 1131px;
@@ -357,7 +386,7 @@
   }
   
   .index .frame {
-    background-color: #fff9f9;
+    background-color: #000000;
     height: 552px;
     left: 697px;
     position: absolute;
@@ -374,9 +403,3 @@
     width: 634px;
   }
  
-  .tab {
-    position: absolute;
-    top: 80px;
-    z-index: 1;
-  }
-  
