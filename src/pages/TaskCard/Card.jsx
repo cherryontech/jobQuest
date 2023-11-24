@@ -39,22 +39,24 @@ export default function TCard({
 
   return (
     <div key={index} className="flex justify-around m-5 ">
-      <Checkbox
-        isSelected={isChecked}
-        onValueChange={handleCheckboxChange(`card${index}`)}
-        size="lg"
-        color="danger"
-        className="text-white"
-        classNames={{ base: "outline-black" }}
-        isInvalid={true}
-      />
       <Card
         shadow="none"
-        className="w-5/6"
+        className={`w-5/6 bg-[${isVisible ? "#FFEAEA" : ""}]`}
         style={{ border: "2px solid #D9E2F3" }}
       >
-        <CardHeader className="flex justify-between items-center px-5">
-          <p className="text-md font-bold">{subCard.title}</p>
+        <CardHeader className="flex justify-between items-center px-3">
+          <div className="flex ">
+            <Checkbox
+              isSelected={isChecked}
+              onValueChange={handleCheckboxChange(`card${index}`)}
+              size="lg"
+              color="danger"
+              className="text-white mx-2"
+              classNames={{ base: "outline-black" }}
+              isInvalid={true}
+            />
+            <p className="text-md font-bold">{subCard.title}</p>
+          </div>
           <Button
             onClick={() => setIsVisible(!isVisible)}
             className="bg-transparent"
@@ -77,21 +79,23 @@ export default function TCard({
         {isVisible && (
           <>
             <Divider style={{ border: "1px solid #D9E2F3" }} />
-            <CardBody className="py-6 px-5">
-              {subCard.description.map((desc, descIndex) => (
-                <div key={descIndex}>
-                  <p>{desc}</p>
-                  {descIndex !== subCard.description.length - 1 && <br />}
-                </div>
-              ))}
-              {subCard.button && (
-                <>
-                  <br />
-                  <Button className="bg-[#FF6667] text-white w-1/6">
-                    {subCard.button}
-                  </Button>
-                </>
-              )}
+            <CardBody className="py-6 pl-10">
+              <div className="mx-10">
+                {subCard.description.map((desc, descIndex) => (
+                  <div key={descIndex}>
+                    <p>{desc}</p>
+                    {descIndex !== subCard.description.length - 1 && <br />}
+                  </div>
+                ))}
+                {subCard.button && (
+                  <>
+                    <br />
+                    <Button className="bg-[#FF6667] text-white w-1/6">
+                      {subCard.button}
+                    </Button>
+                  </>
+                )}
+              </div>
             </CardBody>
           </>
         )}

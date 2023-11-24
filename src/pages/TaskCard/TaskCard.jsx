@@ -10,6 +10,7 @@ export default function TaskCard() {
   const [value, setValue] = React.useState(50);
   const navigateTo = useNavigate();
 
+  //placeholder
   //percentage of tasks the user has completed
   useEffect(() => {
     let i = 0;
@@ -41,7 +42,7 @@ export default function TaskCard() {
   return (
     <div>
       <div
-        className="flex flex-row justify-center items-center w-4/5 m-auto"
+        className="flex flex-row justify-center items-center h-screen m-auto w-4/5"
         style={{ justifyContent: "center" }}
       >
         <div className="w-3/5">
@@ -53,13 +54,13 @@ export default function TaskCard() {
           </p>
         </div>
         <div className="w-2/5">
-          <Image src={mascot} />
+          <Image src={mascot} sizes={"md"} />
         </div>
       </div>
       <div className="p-10" style={{ backgroundColor: "#D9E2F3" }}>
         <div className="w-4/5 m-auto px-20">
           {/* TODO: need to dynamically render path */}
-          <p className="text-gray-700 opacity-50 mb-10">
+          <p className=" text-gray opacity-50 mb-10">
             <span
               className="hover:text-[#FF6667] hover:opacity-100 hover:cursor-pointer"
               onClick={() => navigateTo("/")}
