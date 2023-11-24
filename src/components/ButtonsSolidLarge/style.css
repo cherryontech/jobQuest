@@ -5,7 +5,6 @@
   overflow: hidden;
   position: relative;
   width: 280px;
-  cursor:pointer;
 }
 
 .buttons-solid-large .start-free {
@@ -21,5 +20,4 @@
   text-align: center;
   top: 13px;
   width: 200px;
-  cursor:pointer;
 }
