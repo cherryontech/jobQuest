@@ -1,5 +1,4 @@
 import React from "react";
-import { Buttons } from "../../components/Buttons";
 import "./style.css";
 import { FreeflowingCard } from "../../components/FreeflowingCard";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
@@ -27,33 +26,38 @@ export const RoadmapPage = () => {
 
         <div className="text-wrapper-4">Choose your learning style:</div>
 
-        <div className="bottom-card-section">
+        <div className="bottom-card-section bg-white rounded-3xl">
           <div className="overlap-group">
             <Tabs>
-              <TabList>
-                <Tab>Free Flowing</Tab>
-                <Tab>Linear Path</Tab>
+              <TabList className={"flex w-full mb-16"}>
+                <Tab className={"flex-1 px-12 py-6 text-center bg-[#F5F7F8] rounded-tl-3xl rounded-tr-3xl"}>
+                  <div className="pb-6 text-primary-blue font-bold text-4xl border-b-2 border-solid border-b-primary-blue">Free Flowing</div>
+                  <div className="text-primary-blue py-5 font-inter text-xl font-light">
+                    Dip in and out and complete whatever tasks you like whenever you want!
+                  </div>
+                </Tab>
+                <Tab className={"flex-1 px-12 py-6 text-center bg-[#F5F7F8] rounded-tl-3xl rounded-tr-3xl"}>
+                  <div className="pb-6 text-primary-blue font-bold text-4xl border-b-2 border-solid border-b-primary-blue">Linear Path</div>
+                  <div className="text-primary-blue py-5 font-inter text-xl font-light">
+                    Banish overwhelm. Complete each task one step at a time to unlock the next step.
+                  </div>
+                </Tab>
               </TabList>
-              <TabPanel>
-                {/* <p className="text-wrapper-3">
-                  Banish overwhelm. Complete each task one step at a time to
-                  unlock the next step.
-                </p> */}
-                <div className="freeflowing-card-grid">
-                <FreeflowingCard cardName={"Linkedin"} className="freeflowing-card" />
-                <FreeflowingCard cardName={"Resume"} className="freeflowing-card"/>
-                <FreeflowingCard cardName={"Interview Prep"} className="freeflowing-card"/>
-                <FreeflowingCard cardName={"Application Advice"} className="freeflowing-card"/>
-                <FreeflowingCard cardName={"Job Searching Tips"} className="freeflowing-card"/>
-                <FreeflowingCard cardName={"Bonus Tasks"} className="freeflowing-card"/>
-                </div>
-              </TabPanel>
-              <TabPanel>
-                {/* <p className="text-wrapper-3">
-                  Dip in and out and complete whatever tasks you like whenever
-                  you want!
-                </p> */}
-              </TabPanel>
+              <div className="mb-16">
+                <TabPanel className={"px-12"}>
+                  <div className="freeflowing-card-grid">
+                  <FreeflowingCard cardName={"Linkedin"} cardUrl="linkedin" className="freeflowing-card" />
+                  <FreeflowingCard cardName={"Resume"} cardUrl="resume" className="freeflowing-card"/>
+                  <FreeflowingCard cardName={"Interview Prep"} cardUrl="interview-prep" className="freeflowing-card"/>
+                  <FreeflowingCard cardName={"Application Advice"} cardUrl="application-advice" className="freeflowing-card"/>
+                  <FreeflowingCard cardName={"Job Searching Tips"} cardUrl="job-searching-tips" className="freeflowing-card"/>
+                  <FreeflowingCard cardName={"Bonus Tasks"} cardUrl="bonus-tasks" className="freeflowing-card"/>
+                  </div>
+                </TabPanel>
+                <TabPanel>
+                  {/* Linear Path style here */}
+                </TabPanel>
+              </div>
             </Tabs>
           </div>
         </div>
