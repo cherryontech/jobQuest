@@ -2,7 +2,7 @@
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     width: 100%;
   }
   
@@ -32,11 +32,11 @@
     font-family: "Lato", Helvetica;
     font-size: 32px;
     font-weight: 800;
-    left: 228px;
+    left: 226px;
     letter-spacing: 0;
     line-height: 20px;
     position: absolute;
-    text-align: center;
+    text-align: left;
     top: 29px;
     white-space: nowrap;
   }
@@ -80,7 +80,7 @@
     font-family: "Lato", Helvetica;
     font-size: 24px;
     font-weight: 400;
-    left: 212px;
+    left: 226px;
     letter-spacing: 0;
     line-height: 32px;
     position: absolute;
@@ -94,12 +94,13 @@
     font-family: "Lato", Helvetica;
     font-size: 36px;
     font-weight: 300;
-    left: 228px;
+    left: 226px;
     letter-spacing: 0;
     line-height: 40px;
     position: absolute;
     top: 175px;
     width: 503px;
+    text-align: left;
   }
   
   .landing-page .text-wrapper-3 {
@@ -107,12 +108,13 @@
     font-family: "Inter", Helvetica;
     font-size: 48px;
     font-weight: 700;
-    left: 228px;
+    left: 226px;
     letter-spacing: -0.96px;
     line-height: 60px;
     position: absolute;
     top: 47px;
     width: 523px;
+    text-align: left;
   }
   
   .landing-page .buttons-instance {

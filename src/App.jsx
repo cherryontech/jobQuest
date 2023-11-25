@@ -4,9 +4,9 @@ import { LandingPage } from "./pages/LandingPage";
 import { LoginPage } from "./pages/Login/index";
 import { RoadmapPage } from "./pages/RoadmapPage/RoadmapPage";
 import TaskCard from "./pages/TaskCard/TaskCard"
+
 function App() {
   return (
-    <>
       <Router>
         <Routes>
           <>
@@ -17,7 +17,6 @@ function App() {
           </>
         </Routes>
       </Router>
-    </>
   );
 }
 
