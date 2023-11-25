@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { Image, CircularProgress } from "@nextui-org/react";
+import { useNavigate, useParams } from "react-router-dom";
+
+import Resource from "./Card";
+
 import mascot from "../../assets/finalHomepage.png";
-import { useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
-import TCard from "./Card";
 
 export default function TaskCard() {
   const { task } = useParams();
   const [taskCardData, setTaskCardData] = useState([]);
   const [resource, setResource] = useState({});
   const [value, setValue] = React.useState(0);
+  const [resourceColor, setResourceColor] = useState();
   const navigateTo = useNavigate();
 
-  //placeholder
-  //percentage of tasks the user has completed
+  // placeholder
+  // percentage of tasks the user has completed
   useEffect(() => {
     let i = 0;
     for (const key in resource) {
@@ -48,6 +50,14 @@ export default function TaskCard() {
         setTaskCardData([]);
       }
     };
+
+    setResourceColor(
+      task === "linkedin"
+        ? "danger"
+        : task === "resume"
+        ? "success"
+        : "secondary"
+    );
 
     fetchResourceInfo();
     fetchTaskJsonFile();
@@ -113,19 +123,29 @@ export default function TaskCard() {
               aria-label="Task Percentage"
               size="lg"
               value={value}
-              color="danger"
+              // color="danger"
+              style={{
+                color: `${
+                  task === "linkedin"
+                    ? "#FF6667"
+                    : task === "resume"
+                    ? "#3E7CD9"
+                    : "#36CC96"
+                }`,
+              }}
               className="font-bold"
               showValueLabel={true}
             />
           </div>
           {/* TODO: Need to dynamically render resource here */}
           {taskCardData.map((subCard, index) => (
-            <TCard
+            <Resource
               key={index}
               subCard={subCard}
               index={index}
               task={task}
               resource={resource}
+              resourceColor={resourceColor}
               checked={resource[`card${index}`]}
               setResource={setResource}
             />

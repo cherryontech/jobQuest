@@ -1,0 +1,8 @@
+.linkedin::before{
+    /* Your styles for ::before pseudo-element */
+    /* Example: */
+    color: white;
+    stroke : blue;
+    outline: green;
+    backgroundColor: red;
+  }
