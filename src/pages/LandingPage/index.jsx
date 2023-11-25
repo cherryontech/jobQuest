@@ -2,6 +2,7 @@ import { Buttons } from "../../components/Buttons";
 import "./style.css";
 import finalHomepage from "../../assets/finalHomepage.png"
 import { useNavigate } from "react-router-dom";
+import { NavigationBar } from "../../components/NavigationBar";
 
 export const LandingPage = () => {
   const navigateTo = useNavigate()
@@ -11,7 +12,7 @@ export const LandingPage = () => {
       <div className="div">
         <div className="top-nav-bar">
           <div className="div-wrapper">
-            <div className="text-wrapper">Job Quest</div>
+           <NavigationBar/>
           </div>
         </div>
         <div className="overlap">

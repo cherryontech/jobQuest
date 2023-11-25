@@ -1,6 +1,8 @@
 import React from "react";
 import "./style.css";
 import { FreeflowingCard } from "../../components/FreeflowingCard";
+import { LinearPathCard } from "../../components/LinearPathCard";
+import { ScrollShadow } from "@nextui-org/react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
@@ -56,6 +58,14 @@ export const RoadmapPage = () => {
                 </TabPanel>
                 <TabPanel>
                   {/* Linear Path style here */}
+                  <ScrollShadow className="w-[700px] h-[544px]">
+                    <LinearPathCard cardName={"Linkedin"}/>
+                    <LinearPathCard cardName={"Resume"}/>
+                    <LinearPathCard cardName={"Interview Prep"}/>
+                    <LinearPathCard cardName={"Application Advice"}/>
+                    <LinearPathCard cardName={"Job searching Tips"}/>
+                    <LinearPathCard cardName={"Bonus Tasks"}/>
+                  </ScrollShadow>
                 </TabPanel>
               </div>
             </Tabs>
