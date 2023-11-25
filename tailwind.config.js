@@ -9,7 +9,14 @@ module.exports = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        transparent: "transparent",
+        primary: {
+          blue: "#25274C"
+        },
+      },
+    },
   },
   darkMode: "class",
   plugins: [nextui()]

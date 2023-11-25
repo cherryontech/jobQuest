@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.react-tabs__tab--selected {
+    background-color: transparent !important;
+}
