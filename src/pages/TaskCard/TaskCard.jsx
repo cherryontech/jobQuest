@@ -22,7 +22,7 @@ export default function TaskCard() {
       if (resource[key]) {
         i += 1;
       }
-
+      
       const percent = (i / taskCardData.length) * 100;
       setValue(percent);
     }
@@ -83,7 +83,6 @@ export default function TaskCard() {
       </div>
       <div className="p-10" style={{ backgroundColor: "#D9E2F3" }}>
         <div className="w-4/5 m-auto px-20">
-          {/* TODO: need to dynamically render path */}
           <p className=" text-gray opacity-50 mb-10">
             <span
               className="hover:text-[#FF6667] hover:opacity-100 hover:cursor-pointer"
@@ -100,7 +99,6 @@ export default function TaskCard() {
             </span>
           </p>
           <br />
-          {/* TODO: need to dynamically render title of resource */}
           <h1 className="text-4xl font-bold mb-1" style={{ color: "#2C2C2C" }}>
             {task === "linkedin"
               ? "LinkedIn Profile"
@@ -123,21 +121,10 @@ export default function TaskCard() {
               aria-label="Task Percentage"
               size="lg"
               value={value}
-              // color="danger"
-              style={{
-                color: `${
-                  task === "linkedin"
-                    ? "#FF6667"
-                    : task === "resume"
-                    ? "#3E7CD9"
-                    : "#36CC96"
-                }`,
-              }}
-              className="font-bold"
+              className={`font-bold text-${resourceColor}`}
               showValueLabel={true}
             />
           </div>
-          {/* TODO: Need to dynamically render resource here */}
           {taskCardData.map((subCard, index) => (
             <Resource
               key={index}

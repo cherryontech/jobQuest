@@ -6,7 +6,6 @@ import {
   Checkbox,
   Divider,
   Button,
-  cn,
 } from "@nextui-org/react";
 
 //fontAwesome icons for the dropdown menu
@@ -25,11 +24,23 @@ export default function TCard({
   //for dropdown
   const [isVisible, setIsVisible] = useState(false);
   const [isChecked, setIsChecked] = useState(checked);
+  const [wrapper, setWrapper] = useState("");
 
   //updates checked after initial render of task page
   useEffect(() => {
     setIsChecked(checked);
   }, [checked]);
+
+  //setting nextui wrapper slot
+  useEffect(() => {
+    setWrapper(
+      resourceColor === "danger"
+        ? { wrapper: `before:border-danger` }
+        : resourceColor === "success"
+        ? { wrapper: `before:border-success` }
+        : { wrapper: `before:border-secondary` }
+    );
+  }, [resourceColor]);
 
   const handleCheckboxChange = (key) => (event) => {
     setIsChecked(event);
@@ -39,7 +50,7 @@ export default function TCard({
     //update localStorage with updated information
     localStorage.setItem(task, JSON.stringify(updatedInfo));
   };
-
+  console.log(resourceColor);
   return (
     <div key={index} className="flex justify-around m-5 ">
       <Card
@@ -65,9 +76,7 @@ export default function TCard({
               onValueChange={handleCheckboxChange(`card${index}`)}
               size="lg"
               color={`${resourceColor}`}
-              classNames={{
-                wrapper: `before:border-${resourceColor}`,
-              }}
+              classNames={wrapper}
               className="text-white mx-2"
             />
             <p className="text-md font-bold">{subCard.title}</p>
