@@ -2,12 +2,11 @@ import PropTypes from "prop-types";
 import { ButtonsSolidLarge } from "../ButtonsSolidLarge";
 import "./style.css";
 
-export const Buttons = ({ property1, extraClasses, buttonsSolidLargeText = "Start Free"}) => {
+export const Buttons = ({ property1, extraClasses, clickHandler, buttonsSolidLargeText = "Start Free"}) => {
   return (
-    <div className="cursor-pointer">
-      <div className={`buttons ${extraClasses}`}>
-        <ButtonsSolidLarge
-          extraClasses={`${
+    <div className={`buttons cursor-pointer ${extraClasses}`} onClick={clickHandler}>
+      <ButtonsSolidLarge
+        extraClasses={`${
             property1 === "hover"
             ? "class-4"
             : property1 === "outline"
@@ -19,7 +18,6 @@ export const Buttons = ({ property1, extraClasses, buttonsSolidLargeText = "Star
         divClasses={`${property1 === "outline" ? "class" : property1 === "outlined-hover" ? "class-2" : "class-3"}`}
         text={buttonsSolidLargeText}
       />
-      </div>
     </div>
   );
 };
@@ -27,5 +25,6 @@ export const Buttons = ({ property1, extraClasses, buttonsSolidLargeText = "Star
 Buttons.propTypes = {
   property1: PropTypes.oneOf(["outlined-hover", "solid-large-blue", "outline", "hover"]),
   buttonsSolidLargeText: PropTypes.string,
-  extraClasses: PropTypes.string
+  extraClasses: PropTypes.string,
+  clickHandler: PropTypes.func
 };

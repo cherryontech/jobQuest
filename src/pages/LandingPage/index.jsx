@@ -23,9 +23,12 @@ export const LandingPage = () => {
             <p className="text-wrapper-2">Your path to employment: streamlined job search guidance</p>
             <p className="text-wrapper-3">Feeling overwhelmed with job searching?</p>
           </div>
-          <div onClick={()=> navigateTo('/roadmap')}>
-          <Buttons buttonsSolidLargeText="Start Now" extraClasses="buttons-instance" property1="solid-large-blue"/>
-          </div>
+          <Buttons
+            clickHandler={()=> navigateTo('/roadmap')}
+            buttonsSolidLargeText="Start Now"
+            extraClasses="buttons-instance"
+            property1="solid-large-blue"
+          />
         </div>
       </div>
     </div>
