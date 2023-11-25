@@ -4,12 +4,12 @@ import { useNavigate } from "react-router-dom";
 import { PercentageScore } from "../PercentageScore";
 import "./style.css";
 
-export const FreeflowingCard = ({ cardName }) => {
+export const FreeflowingCard = ({ cardName, cardUrl }) => {
   const navigateTo = useNavigate();
 
   const checkIfLoggedIn = () => {
     if (localStorage.getItem("jobQuestEmail")) {
-      navigateTo(`/${cardName}`); //navigate to taskCard
+      navigateTo(`/${cardUrl}`); //navigate to taskCard
     } else {
       //to-do: show user alert that they need to login
       navigateTo("/login");
@@ -28,4 +28,5 @@ export const FreeflowingCard = ({ cardName }) => {
 
 FreeflowingCard.propTypes = {
   cardName: PropTypes.string,
+  cardUrl: PropTypes.string,
 };
