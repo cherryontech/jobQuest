@@ -7,11 +7,9 @@ import "./style.css";
 export const FreeflowingCard = ({ cardName }) => {
   const navigateTo = useNavigate();
 
-  const currentCardName = cardName;
-
   const checkIfLoggedIn = () => {
     if (localStorage.getItem("jobQuestEmail")) {
-      navigateTo(`/${currentCardName}`); //navigate to taskCard
+      navigateTo(`/${cardName}`); //navigate to taskCard
     } else {
       //to-do: show user alert that they need to login
       navigateTo("/login");
@@ -22,7 +20,7 @@ export const FreeflowingCard = ({ cardName }) => {
     <Card className="card-div cursor-pointer" onClick={() => checkIfLoggedIn()}>
       <CardBody>
         <PercentageScore />
-        <p className="card-name">{currentCardName}</p>
+        <p className="card-name">{cardName}</p>
       </CardBody>
     </Card>
   );
