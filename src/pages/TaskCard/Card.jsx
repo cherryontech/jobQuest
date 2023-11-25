@@ -15,6 +15,7 @@ import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 export default function TCard({
   setResource,
   resource,
+  task,
   subCard,
   index,
   checked,
@@ -34,15 +35,15 @@ export default function TCard({
     const updatedInfo = { ...resource, [key]: event };
     setResource(updatedInfo);
     //update localStorage with updated information
-    localStorage.setItem("linkedin", JSON.stringify(updatedInfo));
+    localStorage.setItem(task, JSON.stringify(updatedInfo));
   };
 
   return (
     <div key={index} className="flex justify-around m-5 ">
       <Card
         shadow="none"
-        className={`w-5/6 bg-[${isVisible ? "#FFEAEA" : ""}]`}
-        style={{ border: "2px solid #D9E2F3" }}
+        className={`w-5/6`}
+        style={{ border: "2px solid #D9E2F3", backgroundColor:  `${isVisible ? "#FFEAEA" : ""}`}}
       >
         <CardHeader className="flex justify-between items-center px-3">
           <div className="flex ">

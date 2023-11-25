@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Image, CircularProgress } from "@nextui-org/react";
 import mascot from "../../assets/finalHomepage.png";
 import { useNavigate } from "react-router-dom";
-import tcard from "./TaskCard.json";
+import { useParams } from "react-router-dom";
 import TCard from "./Card";
 
 export default function TaskCard() {
+  const { task } = useParams();
+  const [taskCardData, setTaskCardData] = useState([]);
   const [resource, setResource] = useState({});
-  const [value, setValue] = React.useState(50);
+  const [value, setValue] = React.useState(0);
   const navigateTo = useNavigate();
 
   //placeholder
@@ -18,26 +20,38 @@ export default function TaskCard() {
       if (resource[key]) {
         i += 1;
       }
-      const percent = (i / tcard.Linkedin.length) * 100;
+
+      const percent = (i / taskCardData.length) * 100;
       setValue(percent);
     }
-  }, [resource]);
+  }, [resource, taskCardData]);
 
   useEffect(() => {
     const fetchResourceInfo = () => {
-      let res = JSON.parse(localStorage.getItem("linkedin"));
+      let res = JSON.parse(localStorage.getItem(task));
       //on initial render set the key/value pairs of cards in localStorage
       if (!res) {
         res = {};
-        localStorage.setItem("linkedin", JSON.stringify(res));
+        localStorage.setItem(task, JSON.stringify(res));
       } else {
         //else grab what's already in localStorage and render
         setResource(res);
       }
     };
+    const fetchTaskJsonFile = async () => {
+      try {
+        const response = (await import(`./${task}.json` /*@vite-ignore*/))
+          .default;
+        setTaskCardData(response);
+      } catch (err) {
+        console.log(`error retrieving ${task} json file, ${err}`);
+        setTaskCardData([]);
+      }
+    };
 
     fetchResourceInfo();
-  }, [tcard.Linkedin]);
+    fetchTaskJsonFile();
+  }, [task]);
 
   return (
     <div>
@@ -76,9 +90,13 @@ export default function TaskCard() {
             </span>
           </p>
           <br />
-          {/* TODO: need to dynamically resource */}
+          {/* TODO: need to dynamically render title of resource */}
           <h1 className="text-4xl font-bold mb-1" style={{ color: "#2C2C2C" }}>
-            LinkedIn Profile
+            {task === "linkedin"
+              ? "LinkedIn Profile"
+              : task === "interview-prep"
+              ? "Interview Prep"
+              : `${task.charAt(0).toUpperCase()}${task.slice(1)}`}
           </h1>
           <p className="mb-10" style={{ fontSize: "120%" }}>
             Tick off as you complete the tasks. Click on the task to get more
@@ -101,11 +119,12 @@ export default function TaskCard() {
             />
           </div>
           {/* TODO: Need to dynamically render resource here */}
-          {tcard.Linkedin.map((subCard, index) => (
+          {taskCardData.map((subCard, index) => (
             <TCard
               key={index}
               subCard={subCard}
               index={index}
+              task={task}
               resource={resource}
               checked={resource[`card${index}`]}
               setResource={setResource}
