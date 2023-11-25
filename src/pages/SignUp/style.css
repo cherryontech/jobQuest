@@ -1,0 +1,216 @@
+.sign-up {
+    background-color: #b9c5dc;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .sign-up .overlap-wrapper {
+    background-color: #b9c5dc;
+    height: 960px;
+    overflow: hidden;
+    width: 1440px;
+  }
+  
+  .sign-up .overlap {
+    height: 1747px;
+    left: -379px;
+    position: relative;
+    top: -451px;
+    width: 2215px;
+  }
+  
+  .sign-up .rectangle {
+    background: linear-gradient(180deg, rgb(216.64, 225.93, 242.96) 0%, rgb(244, 244, 248) 100%);
+    border-radius: 160px;
+    height: 750px;
+    left: 1309px;
+    position: absolute;
+    top: 841px;
+    transform: rotate(-45deg);
+    width: 750px;
+  }
+  
+  .sign-up .div {
+    background: linear-gradient(180deg, rgb(216.64, 225.93, 242.96) 0%, rgb(244, 244, 248) 100%);
+    border-radius: 160px;
+    height: 750px;
+    left: 155px;
+    position: absolute;
+    top: 155px;
+    transform: rotate(-45deg);
+    width: 750px;
+  }
+  
+  .sign-up .create-an-account {
+    height: 698px;
+    left: 750px;
+    position: absolute;
+    top: 582px;
+    width: 704px;
+  }
+  
+  .sign-up .overlap-group {
+    background-color: #eff2f9;
+    border-radius: 49.09px;
+    height: 698px;
+    position: relative;
+    width: 698px;
+  }
+  
+  .sign-up .text-wrapper {
+    color: #24264c;
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 48px;
+    font-weight: 700;
+    left: 124px;
+    letter-spacing: 0;
+    line-height: 71.8px;
+    position: absolute;
+    text-align: center;
+    top: 91px;
+    white-space: nowrap;
+    width: 451px;
+  }
+  
+  .sign-up .p {
+    color: #24264c;
+    font-family: "Inter-Light", Helvetica;
+    font-size: 20px;
+    font-weight: 300;
+    left: 176px;
+    letter-spacing: 0;
+    line-height: 26px;
+    position: absolute;
+    text-align: center;
+    top: 163px;
+    width: 346px;
+  }
+  
+  .sign-up .group {
+    height: 84px;
+    left: 107px;
+    position: absolute;
+    top: 255px;
+    width: 486px;
+  }
+  
+  .sign-up .div-wrapper {
+    background-color: #ffffff;
+    border: 1.53px solid;
+    border-color: #0000001a;
+    border-radius: 15.34px;
+    height: 84px;
+    position: relative;
+    width: 484px;
+  }
+  
+  .sign-up .text-wrapper-2 {
+    color: #25274d80;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 30px;
+    letter-spacing: 0;
+    line-height: 19.5px;
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    white-space: nowrap;
+    width: 108px;
+  }
+  
+  .sign-up .overlap-group-wrapper {
+    height: 84px;
+    left: 107px;
+    position: absolute;
+    top: 363px;
+    width: 486px;
+  }
+  
+  .sign-up .text-wrapper-3 {
+    color: #25274d80;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 30px;
+    letter-spacing: 0;
+    line-height: 19.5px;
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    white-space: nowrap;
+    width: 82px;
+  }
+  
+  .sign-up .already-have-an {
+    color: transparent;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 240px;
+    letter-spacing: 0;
+    line-height: 27.9px;
+    position: absolute;
+    text-align: center;
+    top: 584px;
+    white-space: nowrap;
+    width: 218px;
+  }
+  
+  .sign-up .span {
+    color: #24264c;
+  }
+  
+  .sign-up .text-wrapper-4 {
+    color: #396ed4;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+  }
+  
+  .sign-up .text-wrapper-5 {
+    color: #ff6667;
+    font-family: "Inter-ExtraBold", Helvetica;
+    font-weight: 800;
+    text-decoration: underline;
+  }
+  
+  .sign-up .create-account {
+    height: 84px;
+    left: 167px;
+    position: absolute;
+    top: 484px;
+    width: 365px;
+  }
+  
+  .sign-up .overlap-2 {
+    background-color: #090459;
+    border-radius: 23.01px;
+    height: 84px;
+    position: relative;
+    width: 363px;
+  }
+  
+  .sign-up .text-wrapper-6 {
+    color: #ffffff;
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 32px;
+    font-weight: 700;
+    left: 58px;
+    letter-spacing: 0;
+    line-height: 43.9px;
+    position: absolute;
+    text-align: center;
+    top: 21px;
+    white-space: nowrap;
+    width: 247px;
+  }
+  
+  .sign-up .x-close {
+    height: 36px !important;
+    left: 636px !important;
+    position: absolute !important;
+    top: 26px !important;
+    width: 36px !important;
+  }

@@ -1,0 +1,13 @@
+.x-close-screen {
+    height: 36px;
+    position: relative;
+    width: 36px;
+  }
+  
+  .x-close-screen .icon {
+    height: 20px;
+    left: 8px;
+    position: absolute;
+    top: 8px;
+    width: 20px;
+  }
