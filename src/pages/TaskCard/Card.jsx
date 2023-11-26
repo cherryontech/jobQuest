@@ -50,7 +50,7 @@ export default function TCard({
     //update localStorage with updated information
     localStorage.setItem(task, JSON.stringify(updatedInfo));
   };
-  console.log(resourceColor);
+  
   return (
     <div key={index} className="flex justify-around m-5 ">
       <Card
