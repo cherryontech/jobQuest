@@ -22,7 +22,7 @@ export default function TaskCard() {
       if (resource[key]) {
         i += 1;
       }
-      
+
       const percent = (i / taskCardData.length) * 100;
       setValue(percent);
     }
@@ -121,7 +121,10 @@ export default function TaskCard() {
               aria-label="Task Percentage"
               size="lg"
               value={value}
-              className={`font-bold text-${resourceColor}`}
+              classNames={{
+                value: `font-bold text-black`
+              }}
+              className={`text-${resourceColor}`}
               showValueLabel={true}
             />
           </div>
