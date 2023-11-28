@@ -19,7 +19,9 @@ export const FreeflowingCard = ({ cardName, cardUrl }) => {
   return (
     <Card className={`card-div cursor-pointer ${cardUrl}`} onClick={() => checkIfLoggedIn()}>
       <CardBody>
-        <PercentageScore className="m-1.5"/>
+        <div style={{ width: '0%', height: '10%', position: 'relative', top: '7.8%', left: '72%', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', display: 'inline-flex' }}>
+          <PercentageScore />
+        </div>
         <p className="card-name">{cardName}</p>
       </CardBody>
     </Card>

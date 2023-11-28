@@ -9,7 +9,7 @@
   letter-spacing: 0.6px;
   word-wrap: "break-word";
   position: relative;
-  top: 44%;
+  top: 42%;
   transform: translateY(-50%);
 }
 .card-div {
@@ -61,9 +61,4 @@ background: linear-gradient(0deg, rgba(204, 188, 240, 0.40) 43.54%, rgba(45, 144
 }
 .card-div:hover {
   box-shadow: -4px 7px 4px #1910a5;
-}
-
-.percentage-score {
-  position: "absolute";
-  left: 60%;
 }
