@@ -8,8 +8,8 @@ import {
   Image,
   ScrollShadow,
 } from "@nextui-org/react";
-import articles from './articles.json'
-
+import articles from "./articles.json";
+import './articles.css'
 export default function Articles() {
   const navigateTo = useNavigate();
 
@@ -54,11 +54,10 @@ export default function Articles() {
         <h1 className="text-4xl font-bold mb-1 text-[#25274D] mb-8">
           LinkedIn Profile
         </h1>
-        <div className="flex flex-wrap justify-center ">
-          {/* TODO: 'ADD COLORED SCROLL BAR' */}
-          {/* <ScrollShadow> */}
+        <div className="articles overflow-y-scroll h-[600px] flex flex-wrap justify-center">
+        {/* <ScrollShadow size={30} className=" h-[600px] flex flex-wrap justify-center"> */}
           {articles.map((article, index) => (
-            <Card key={index} className="w-[360px] max-w-[400px] m-5">
+            <Card key={index} className="w-[360px] max-w-[400px] m-5 ">
               <CardHeader className="m-0 max-h-[250px] p-0">
                 <Image radius="none" src={article.image} />
               </CardHeader>
@@ -78,8 +77,9 @@ export default function Articles() {
               </CardBody>
             </Card>
           ))}
-          {/* </ScrollShadow> */}
-        </div>
+          </div>
+        {/* </ScrollShadow> */}
+        {/* </div> */}
       </div>
     </div>
   );
