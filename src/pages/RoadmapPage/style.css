@@ -406,3 +406,8 @@
 .freeflowing-card {
   flex: 1 0 30%;
 }
+
+.div-wrapper {
+  height: 84px;
+  position: relative;
+}

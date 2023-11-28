@@ -5,6 +5,7 @@ import { LinearPathCard } from "../../components/LinearPathCard";
 import { ScrollShadow } from "@nextui-org/react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import { NavigationBar } from "../../components/NavigationBar";
 
 export const RoadmapPage = () => {
   return (
@@ -16,8 +17,8 @@ export const RoadmapPage = () => {
       </p>
 
       <div className="top-nav-bar">
-        <div className="top-nav-bar-2">
-          <div className="nav-text">Job Quest</div>
+      <div className="div-wrapper">
+      <NavigationBar />
         </div>
       </div>
 
