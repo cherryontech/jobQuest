@@ -1,43 +1,67 @@
 import React, { useEffect, useState } from "react";
 import { Image, CircularProgress } from "@nextui-org/react";
+import { useNavigate, useParams } from "react-router-dom";
+
+import Resource from "./Card";
+
 import mascot from "../../assets/finalHomepage.png";
-import { useNavigate } from "react-router-dom";
-import tcard from "./TaskCard.json";
-import TCard from "./Card";
 
 export default function TaskCard() {
+  const { task } = useParams();
+  const [taskCardData, setTaskCardData] = useState([]);
   const [resource, setResource] = useState({});
-  const [value, setValue] = React.useState(50);
+  const [value, setValue] = React.useState(0);
+  const [resourceColor, setResourceColor] = useState();
   const navigateTo = useNavigate();
 
-  //placeholder
-  //percentage of tasks the user has completed
+  // placeholder
+  // percentage of tasks the user has completed
   useEffect(() => {
     let i = 0;
     for (const key in resource) {
       if (resource[key]) {
         i += 1;
       }
-      const percent = (i / tcard.Linkedin.length) * 100;
+
+      const percent = (i / taskCardData.length) * 100;
       setValue(percent);
     }
-  }, [resource]);
+  }, [resource, taskCardData]);
 
   useEffect(() => {
     const fetchResourceInfo = () => {
-      let res = JSON.parse(localStorage.getItem("linkedin"));
+      let res = JSON.parse(localStorage.getItem(task));
       //on initial render set the key/value pairs of cards in localStorage
       if (!res) {
         res = {};
-        localStorage.setItem("linkedin", JSON.stringify(res));
+        localStorage.setItem(task, JSON.stringify(res));
       } else {
         //else grab what's already in localStorage and render
         setResource(res);
       }
     };
+    const fetchTaskJsonFile = async () => {
+      try {
+        const response = (await import(`./${task}.json` /*@vite-ignore*/))
+          .default;
+        setTaskCardData(response);
+      } catch (err) {
+        console.log(`error retrieving ${task} json file, ${err}`);
+        setTaskCardData([]);
+      }
+    };
+
+    setResourceColor(
+      task === "linkedin"
+        ? "danger"
+        : task === "resume"
+        ? "success"
+        : "secondary"
+    );
 
     fetchResourceInfo();
-  }, [tcard.Linkedin]);
+    fetchTaskJsonFile();
+  }, [task]);
 
   return (
     <div>
@@ -59,7 +83,6 @@ export default function TaskCard() {
       </div>
       <div className="p-10" style={{ backgroundColor: "#D9E2F3" }}>
         <div className="w-4/5 m-auto px-20">
-          {/* TODO: need to dynamically render path */}
           <p className=" text-gray opacity-50 mb-10">
             <span
               className="hover:text-[#FF6667] hover:opacity-100 hover:cursor-pointer"
@@ -76,9 +99,12 @@ export default function TaskCard() {
             </span>
           </p>
           <br />
-          {/* TODO: need to dynamically resource */}
           <h1 className="text-4xl font-bold mb-1" style={{ color: "#2C2C2C" }}>
-            LinkedIn Profile
+            {task === "linkedin"
+              ? "LinkedIn Profile"
+              : task === "interview-prep"
+              ? "Interview Prep"
+              : `${task.charAt(0).toUpperCase()}${task.slice(1)}`}
           </h1>
           <p className="mb-10" style={{ fontSize: "120%" }}>
             Tick off as you complete the tasks. Click on the task to get more
@@ -95,18 +121,21 @@ export default function TaskCard() {
               aria-label="Task Percentage"
               size="lg"
               value={value}
-              color="danger"
-              className="font-bold"
+              classNames={{
+                value: `font-bold text-black`
+              }}
+              className={`text-${resourceColor}`}
               showValueLabel={true}
             />
           </div>
-          {/* TODO: Need to dynamically render resource here */}
-          {tcard.Linkedin.map((subCard, index) => (
-            <TCard
+          {taskCardData.map((subCard, index) => (
+            <Resource
               key={index}
               subCard={subCard}
               index={index}
+              task={task}
               resource={resource}
+              resourceColor={resourceColor}
               checked={resource[`card${index}`]}
               setResource={setResource}
             />

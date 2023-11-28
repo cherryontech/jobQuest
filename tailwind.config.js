@@ -13,7 +13,7 @@ module.exports = {
       colors: {
         transparent: "transparent",
         primary: {
-          blue: "#25274C"
+          blue: "#25274C",
         },
       },
     },
@@ -24,7 +24,11 @@ module.exports = {
       themes: {
         light: {
           // ...
-          colors: {danger: "#FF6667",},
+          colors: {
+            danger: "#FF6667",
+            success: "#3E7CD9",
+            secondary: "#36CC96",
+          },
         },
         dark: {
           // ...
