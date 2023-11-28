@@ -11,6 +11,7 @@ import {
 //fontAwesome icons for the dropdown menu
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 export default function TCard({
   setResource,
@@ -25,6 +26,7 @@ export default function TCard({
   const [isVisible, setIsVisible] = useState(false);
   const [isChecked, setIsChecked] = useState(checked);
   const [wrapper, setWrapper] = useState("");
+  const navigateTo = useNavigate()
 
   //updates checked after initial render of task page
   useEffect(() => {
@@ -50,7 +52,7 @@ export default function TCard({
     //update localStorage with updated information
     localStorage.setItem(task, JSON.stringify(updatedInfo));
   };
-  
+
   return (
     <div key={index} className="flex justify-around m-5 ">
       <Card
@@ -110,7 +112,14 @@ export default function TCard({
                 {subCard.button && (
                   <>
                     <br />
-                    <Button className={`text-white w-1/6 bg-${resourceColor}`}>
+                    <Button
+                      onClick={
+                        subCard.button === "See Articles"
+                          ? () => navigateTo('/articles')
+                          : undefined
+                      }
+                      className={`text-white w-1/6 bg-${resourceColor}`}
+                    >
                       {subCard.button}
                     </Button>
                   </>
