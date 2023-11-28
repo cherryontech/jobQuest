@@ -1,4 +1,5 @@
-//styling for articles scrollbar
+/* styling for articles scrollbar */
+
 .articles{
     overflow-y: scroll;
     height: 600px;
