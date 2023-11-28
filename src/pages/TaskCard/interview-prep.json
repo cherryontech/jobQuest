@@ -1,0 +1,122 @@
+[
+    {
+      "title": "1.) Research the Company",
+      "description": [
+        "Understand the company's mission, values, and culture.",
+        "Familiarize yourself with recent news, projects, and achievements."
+      ],
+      "button": "Learn more"
+    },
+    {
+      "title": "2.) Study the Job Description",
+      "description": [
+        "Analyze the job requirements and key responsibilities.",
+        "Identify the skills and qualifications needed for the position."
+      ],
+      "button": ""
+    },
+    {
+      "title": "3.) Know Your Resume",
+      "description": [
+        "Be prepared to discuss your work experience, skills, and accomplishments.",
+        "Connect your past experiences to the requirements of the new role."
+      ],
+      "button": ""
+    },
+    {
+      "title": "4.) Understand the industry ",
+      "description": [
+        "Stay informed about trends, challenges, and opportunities in the industry",
+        "Be ready to discuss how your skills align with industry demands"
+      ],
+      "button": ""
+    },
+    {
+      "title": "5.) Prepare for Common Questions",
+      "description": [
+        "Anticipate and rehearse responses to common interview questions.",
+        "Use the STAR method (Situation, Task, Action, Result) to structure your answers."
+      ],
+      "button": ""
+    },
+    {
+      "title": "6.) Practice Behavioral Interviews",
+      "description": [
+        "Be ready to share specific examples of your problem-solving and teamwork skills.",
+        "Practice articulating your accomplishments and challenges in previous roles."
+      ],
+      "button": "Learn more"
+    },
+    {
+      "title": "7.) Stay Updated on Your Skills",
+      "description": [
+        "Brush up on technical skills or knowledge relevant to the job.",
+        "Be prepared to discuss any recent training or certifications."
+      ],
+      "button": ""
+    },
+    {
+      "title": "8.) Prepare Questions",
+      "description": [
+        "Have thoughtful questions for the interviewer about the company, team, or role.",
+        "Avoid asking questions that can be easily answered through basic research."
+      ],
+      "button": ""
+    },
+    {
+      "title": "9.) Mock Interviews",
+      "description": [
+        "Conduct mock interviews with a friend, mentor, or career coach.",
+        "Get constructive feedback on your communication style and responses."
+      ],
+      "button": "Learn more"
+    },
+    {
+      "title": "10.) Dress Professionally",
+      "description": [
+        "Wear appropriate attire based on the company culture and industry norms.",
+        "Ensure your appearance reflects your respect for the opportunity."
+      ],
+      "button": "Learn more"
+    },
+    {
+      "title": "11.) Be Punctual",
+      "description": [
+        "Plan to arrive at least 10-15 minutes early for in-person or virtual interviews.",
+        "Test your technology if it's a remote interview."
+      ],
+      "button": "Learn more"
+    },
+    {
+      "title": "12.) Body Language and Non-verbal Communication",
+      "description": [
+        "Practice maintaining good posture and making eye contact.",
+        "Pay attention to your tone, pitch, and speed of speech."
+      ],
+      "button": "Learn more"
+    },
+    {
+      "title": "13.) Research Interviewers",
+      "description": [
+        "If possible, know who will be interviewing you and their role in the company.",
+        "Look for common interests or connections to build rapport."
+      ],
+      "button": "Learn more"
+    },
+    {
+      "title": "14.) Understand the Format",
+      "description": [
+        "Know if it's a one-on-one, panel, phone, or video interview.",
+        "Familiarize yourself with any assessment tools or tests that might be used."
+      ],
+      "button": "Learn more"
+    },
+    {
+      "title": "15.) Follow-up",
+      "description": [
+        "Send a thank-you email expressing gratitude for the opportunity.",
+        "Reiterate your interest in the position and briefly summarize why you're a good fit."
+      ],
+      "button": "Learn more"
+    }
+  ]
