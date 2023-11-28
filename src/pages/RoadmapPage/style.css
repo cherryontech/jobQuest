@@ -407,3 +407,27 @@
   flex: 1 0 20%;
 }
 
+/* .scrollbar {
+  display: block;
+  overflow: auto;
+} */
+
+.scrollbar::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #FAFAFA; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #FF6667; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5152; 
+}

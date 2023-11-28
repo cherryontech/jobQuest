@@ -58,7 +58,7 @@ export const RoadmapPage = () => {
                   </div>
                 </TabPanel>
                 <TabPanel className={"px-32"}>
-                  <ScrollShadow className="w-[750px] h-[544px]" size="24">
+                  <ScrollShadow className="w-[750px] h-[544px] scrollbar" size="24">
                     <LinearPathCard cardName={"Linkedin"} cardUrl="linkedin"/>
                     <LinearPathCard cardName={"Resume"} cardUrl="resume"/>
                     <LinearPathCard cardName={"Interview Prep"} cardUrl="interview-prep"/>
