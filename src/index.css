@@ -1,27 +1,8 @@
-:root {
-  --foundation-bluedark: rgba(29, 36, 45, 1);
-  --foundation-bluedark-active: rgba(9, 11, 14, 1);
-  --foundation-bluedark-hover: rgba(21, 26, 32, 1);
-  --foundation-bluelight-active: rgba(144, 157, 173, 1);
-  --foundation-bluelight-hover: rgba(163, 173, 187, 1);
-  --foundation-bluelighter: rgba(178, 187, 198, 1);
-  --foundation-bluenormal: rgba(84, 104, 129, 1);
-  --foundation-bluenormal-active: rgba(61, 76, 94, 1);
-  --foundation-bluenormal-hover: rgba(71, 88, 110, 1);
-  --foundation-whitedark: rgba(191, 183, 174, 1);
-  --foundation-whitedark-active: rgba(115, 110, 104, 1);
-  --foundation-whitedark-hover: rgba(153, 146, 139, 1);
-  --foundation-whitedarker: rgba(89, 85, 81, 1);
-  --foundation-whitelight: rgba(255, 254, 253, 1);
-  --foundation-whitelight-active: rgba(255, 252, 248, 1);
-  --foundation-whitelight-hover: rgba(255, 253, 252, 1);
-  --foundation-whitenormal: rgba(255, 244, 232, 1);
-  --foundation-whitenormal-active: rgba(204, 195, 186, 1);
-  --foundation-whitenormal-hover: rgba(230, 220, 209, 1);
-  --text-sm-medium-font-family: "Inter-Medium", Helvetica;
-  --text-sm-medium-font-size: 14px;
-  --text-sm-medium-font-style: normal;
-  --text-sm-medium-font-weight: 500;
-  --text-sm-medium-letter-spacing: 0px;
-  --text-sm-medium-line-height: 20px;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.react-tabs__tab--selected {
+    background-color: transparent !important;
 }

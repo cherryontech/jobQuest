@@ -1,24 +1,23 @@
-// import finalHomepage from './assets/finalHomepage.png'
-// import yellowBanner from './assets/yellowBanner.svg'
-import './App.css'
-import React from 'react'
-import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { LandingPage } from "./pages/LandingPage";
-import { SignUp } from "./pages/SignUp";
+import { LoginPage } from "./pages/Login/index";
+import { RoadmapPage } from "./pages/RoadmapPage/index";
+import TaskCard from "./pages/TaskCard/TaskCard"
 
-export const App = () => {
-
+function App() {
   return (
-    <>
       <Router>
-        <div>
-          <Routes>
-            {/* <Route path="/login" element={<Login />} /> */}
-            <Route path="/signup" element={<SignUp />} />
+        <Routes>
+          <>
             <Route path="/" element={<LandingPage />} />
-          </Routes>
-        </div>
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/roadmap" element={<RoadmapPage />} />
+            <Route path="/taskcard" element={<TaskCard />} />
+          </>
+        </Routes>
       </Router>
-    </>
-  )
+  );
 }
+
+export default App;
