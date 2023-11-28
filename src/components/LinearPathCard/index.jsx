@@ -9,7 +9,7 @@ export const LinearPathCard = ({ cardName, cardUrl }) => {
     <Card className={`linearpath-card-div ${cardUrl}`}>
         <CardBody>
         <PercentageScore />
-          <p className="card-name">{cardName}</p>
+          <p className="linearpath-card-name">{cardName}</p>
         </CardBody>
       </Card>
   );

@@ -1,12 +1,12 @@
-.card-name {
+.linearpath-card-name {
     color: #25274c;
     text-align: center;
     font-family: Inter;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
-    line-height: 34px; /* 75% */
-    letter-spacing: 1.6px;
+    line-height: 36px; /* 75% */
+    letter-spacing: 0.6px;
     word-wrap: 'break-word';
     position: relative;
     top: 44%;

@@ -57,9 +57,8 @@ export const RoadmapPage = () => {
                   <FreeflowingCard cardName={"Bonus Tasks"} cardUrl="bonus-tasks" className="freeflowing-card"/>
                   </div>
                 </TabPanel>
-                <TabPanel>
-                  {/* Linear Path style here */}
-                  <ScrollShadow className="w-[700px] h-[544px]">
+                <TabPanel  className={"px-32"}>
+                  <ScrollShadow className="w-[700px] h-[544px]" size="24">
                     <LinearPathCard cardName={"Linkedin"} cardUrl="linkedin"/>
                     <LinearPathCard cardName={"Resume"} cardUrl="resume"/>
                     <LinearPathCard cardName={"Interview Prep"} cardUrl="interview-prep"/>
