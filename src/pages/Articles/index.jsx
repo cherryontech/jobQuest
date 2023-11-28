@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Card,
@@ -15,6 +15,12 @@ import "./articles.css";
 export default function Articles() {
   const navigateTo = useNavigate();
 
+  useEffect(() => {
+    if (!localStorage.getItem("jobQuestEmail")) {
+          navigateTo("/login");
+        }
+    }, [])
+    
   return (
     <div className="p-10 " style={{ backgroundColor: "#D9E2F3" }}>
       <div className="w-4/6 m-auto ">
