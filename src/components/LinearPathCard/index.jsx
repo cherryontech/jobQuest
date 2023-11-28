@@ -3,14 +3,13 @@ import { Card, CardBody } from "@nextui-org/react";
 import { PercentageScore } from "../PercentageScore";
 import "./style.css";
 
-export const LinearPathCard = ({ cardName }) => {
-  const currentCardName = cardName;
+export const LinearPathCard = ({ cardName, cardUrl }) => {
 
   return (
-      <Card className="linearpath-card-div">
+    <Card className={`linearpath-card-div ${cardUrl}`}>
         <CardBody>
         <PercentageScore />
-          <p className="card-name">{currentCardName}</p>
+          <p className="card-name">{cardName}</p>
         </CardBody>
       </Card>
   );

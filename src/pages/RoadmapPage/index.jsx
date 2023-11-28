@@ -60,12 +60,12 @@ export const RoadmapPage = () => {
                 <TabPanel>
                   {/* Linear Path style here */}
                   <ScrollShadow className="w-[700px] h-[544px]">
-                    <LinearPathCard cardName={"Linkedin"}/>
-                    <LinearPathCard cardName={"Resume"}/>
-                    <LinearPathCard cardName={"Interview Prep"}/>
-                    <LinearPathCard cardName={"Application Advice"}/>
-                    <LinearPathCard cardName={"Job searching Tips"}/>
-                    <LinearPathCard cardName={"Bonus Tasks"}/>
+                    <LinearPathCard cardName={"Linkedin"} cardUrl="linkedin"/>
+                    <LinearPathCard cardName={"Resume"} cardUrl="resume"/>
+                    <LinearPathCard cardName={"Interview Prep"} cardUrl="interview-prep"/>
+                    <LinearPathCard cardName={"Application Advice"} cardUrl="application-advice"/>
+                    <LinearPathCard cardName={"Job searching Tips"} cardUrl="job-searching-tips"/>
+                    <LinearPathCard cardName={"Bonus Tasks"} cardUrl="bonus-tasks"/>
                   </ScrollShadow>
                 </TabPanel>
               </div>
