@@ -32,7 +32,7 @@
   }
   
   .percentage-lp {
-    width: 10% !important;
+    left: 86% !important;
   }
 
   /*    <div style={{ width: '0%', height: '10%', position: 'relative', left: '74%', transform: 'translate(147%, -10%)', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', display: 'inline-flex' }}>

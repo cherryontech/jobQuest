@@ -49,7 +49,7 @@ export const RoadmapPage = () => {
               <div className="mb-16">
                 <TabPanel className={"px-12"}>
                   <div className="freeflowing-card-grid">
-                  <FreeflowingCard cardName={"Linkedin"} cardUrl="linkedin" className="freeflowing-card" />
+                  <FreeflowingCard cardName={"Linkedin"} cardUrl="linkedin" className="freeflowing-card"/>
                   <FreeflowingCard cardName={"Resume"} cardUrl="resume" className="freeflowing-card"/>
                   <FreeflowingCard cardName={"Interview Prep"} cardUrl="interview-prep" className="freeflowing-card"/>
                   <FreeflowingCard cardName={"Application Advice"} cardUrl="application-advice" className="freeflowing-card"/>

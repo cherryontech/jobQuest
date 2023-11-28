@@ -398,16 +398,12 @@
 
 .freeflowing-card-grid {
   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   align-items: space-between;;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: space-between;;
 }
 
 .freeflowing-card {
-  flex: 1 0 30%;
+  flex: 1 0 20%;
 }
 
-.div-wrapper {
-  height: 84px;
-  position: relative;
-}

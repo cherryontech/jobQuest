@@ -1,36 +1,73 @@
 .card-name {
-    color: #25274c;
-    text-align: center;
-    font-family: Inter;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 34px; /* 75% */
-    letter-spacing: 1.6px;
-    word-wrap: 'break-word';
-    position: relative;
-    top: 44%;
-    transform: translateY(-50%);
-  }
-  .card-div {
-    border-radius: 24px;
-    border: 2px solid #ff6667;
-    background: linear-gradient(
-      180deg,
-      rgba(247, 216, 217, 0.4) 42.08%,
-      rgba(21, 131, 255, 0.2) 100%
-    );
-    width: 240px;
-    height: 240px;
-    flex-shrink: 0;
-    margin: 32px;
-  }
-  
-  .card-div:hover {
-    box-shadow: -4px 7px 4px #1910A5;
-  }
-  
-  .percentage-score {
-    position: 'absolute'; 
-    left: 60%;
-  }
+  color: #25274c;
+  text-align: center;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 34px; /* 75% */
+  letter-spacing: 1.6px;
+  word-wrap: "break-word";
+  position: relative;
+  top: 44%;
+  transform: translateY(-50%);
+}
+.card-div {
+  border-radius: 24px;
+  border: 2px solid #ff6667;
+  background: linear-gradient(
+    180deg,
+    rgba(247, 216, 217, 0.4) 42.08%,
+    rgba(21, 131, 255, 0.2) 100%
+  );
+  width: 240px;
+  height: 240px;
+  flex-shrink: 0;
+  margin: 24px;
+}
+
+.linkedin {
+  border: 2px solid #ff6667;
+  background: linear-gradient(
+    180deg,
+    rgba(247, 216, 217, 0.4) 42.08%,
+    rgba(21, 131, 255, 0.2) 100%
+  );
+}
+
+.resume {
+  border: 2px solid #3e7cd9;
+  background: linear-gradient(
+    0deg,
+    rgba(149, 189, 250, 0.1) 19.17%,
+    rgba(27, 121, 227, 0.25) 77.08%
+  );
+}
+
+.interview-prep {
+border: 2px solid #36CC96;
+background: linear-gradient(0deg, rgba(207, 237, 226, 0.40) 42.5%, rgba(27, 121, 227, 0.20) 73.12%);
+}
+
+.application-advice {
+border: 2px solid #1910A5;
+background: linear-gradient(0deg, rgba(10, 196, 207, 0.20) 32.15%, rgba(49, 146, 255, 0.20) 80.63%);
+}
+
+.job-searching-tips {
+border: 2px solid #CF3C84;
+background: linear-gradient(0deg, rgba(244, 191, 216, 0.30) 40.63%, rgba(48, 145, 255, 0.15) 84.58%);
+}
+
+.bonus-tasks {
+border: 2px solid #6536EC;
+background: linear-gradient(0deg, rgba(204, 188, 240, 0.40) 43.54%, rgba(45, 144, 255, 0.15) 75.21%);
+}
+.card-div:hover {
+  box-shadow: -4px 7px 4px #1910a5;
+}
+
+.percentage-score {
+  position: "absolute";
+  left: 60%;
+}
