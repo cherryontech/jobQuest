@@ -8,8 +8,10 @@ import {
   Image,
   ScrollShadow,
 } from "@nextui-org/react";
+
 import articles from "./articles.json";
-import './articles.css'
+import "./articles.css";
+
 export default function Articles() {
   const navigateTo = useNavigate();
 
@@ -51,11 +53,10 @@ export default function Articles() {
         className="w-4/6 m-auto bg-white p-12"
         style={{ borderRadius: "30px" }}
       >
-        <h1 className="text-4xl font-bold mb-1 text-[#25274D] mb-8">
+        <h1 className="text-4xl font-bold text-[#25274D] my-8 ml-7">
           LinkedIn Profile
         </h1>
-        <div className="articles overflow-y-scroll h-[600px] flex flex-wrap justify-center">
-        {/* <ScrollShadow size={30} className=" h-[600px] flex flex-wrap justify-center"> */}
+        <ScrollShadow size={30} className="articles">
           {articles.map((article, index) => (
             <Card key={index} className="w-[360px] max-w-[400px] m-5 ">
               <CardHeader className="m-0 max-h-[250px] p-0">
@@ -77,9 +78,7 @@ export default function Articles() {
               </CardBody>
             </Card>
           ))}
-          </div>
-        {/* </ScrollShadow> */}
-        {/* </div> */}
+        </ScrollShadow>
       </div>
     </div>
   );

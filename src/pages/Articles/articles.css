@@ -1,0 +1,23 @@
+//styling for articles scrollbar
+.articles{
+    overflow-y: scroll;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.articles::-webkit-scrollbar{
+    width: 2.5em;
+}
+
+.articles::-webkit-scrollbar-track{
+    background: #FAFAFA;
+    border: 3px solid #E8E8E8;
+    border-radius: 30px;
+}
+
+.articles::-webkit-scrollbar-thumb{
+    background: #FF6667;
+    border-radius: 30px;
+}
