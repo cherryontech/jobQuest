@@ -8,8 +8,10 @@ export const FreeflowingCard = ({ cardName, cardUrl }) => {
   const navigateTo = useNavigate();
 
   const checkIfLoggedIn = () => {
-    if (localStorage.getItem("jobQuestEmail")) {
-      navigateTo(`/${cardUrl}`); //navigate to taskCard
+    const loginStatus = localStorage.getItem("loginStatus");
+
+    if (loginStatus === "true") {
+      navigateTo(`/${cardUrl}`);
     } else {
       //to-do: show user alert that they need to login
       navigateTo("/login");
@@ -17,14 +19,16 @@ export const FreeflowingCard = ({ cardName, cardUrl }) => {
   };
 
   return (
-    <Card className={`card-div cursor-pointer ${cardUrl}`} onClick={() => checkIfLoggedIn()}>
-      <CardBody>
-        <div style={{ width: '0%', height: '10%', position: 'relative', top: '7.8%', left: '72%', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', display: 'inline-flex' }}>
-          <PercentageScore />
-        </div>
-        <p className="card-name">{cardName}</p>
-      </CardBody>
-    </Card>
+    <div onClick={() => checkIfLoggedIn()}>
+      <Card className={`card-div cursor-pointer ${cardUrl}`}>
+        <CardBody>
+          <div style={{ width: '0%', height: '10%', position: 'relative', top: '7.8%', left: '72%', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', display: 'inline-flex' }}>
+            <PercentageScore />
+          </div>
+          <p className="card-name">{cardName}</p>
+        </CardBody>
+      </Card>
+    </div>
   );
 };
 

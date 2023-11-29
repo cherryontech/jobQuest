@@ -61,18 +61,21 @@ export const LoginPage = () => {
       if (!email || !password) {
         localStorage.setItem("jobQuestEmail", result.email);
         localStorage.setItem("jobQuestPassword", result.email);
+        localStorage.setItem("loginStatus", true);
         navigateTo("/roadmap");
       }
       //else, check if they are equal to values saved in localStorage
       else {
         if (email === result.email && password === result.password) {
           navigateTo("/roadmap");
+          localStorage.setItem("loginStatus", true);
         } else {
           const field = "loginFailed";
           setErrors((prev) => ({
             ...prev,
             [field]: "Incorrect Username/Password",
           }));
+          localStorage.setItem("loginStatus", false);
         }
         setIsLoading(false);
       }

@@ -12,7 +12,7 @@ export const LandingPage = () => {
       <div className="div">
         <div className="top-nav-bar">
           <div className="div-wrapper">
-          <NavigationBar isLoggedin= "true"/>
+          <NavigationBar />
           </div>
         </div>
         <div className="overlap">
