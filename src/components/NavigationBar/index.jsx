@@ -34,7 +34,12 @@ export const NavigationBar = () => {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {isLoggedin ? (
           <NavbarItem className="nav-button mt-5">
-            <Button as={Link} href="/login" className="signup-text">
+            <Button 
+            onClick={() => {
+              localStorage.setItem("loginStatus", false);
+              navigateTo("/login");
+            }}
+            className="signup-text">
               Log Out
             </Button>
           </NavbarItem>
