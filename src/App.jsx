@@ -4,7 +4,7 @@ import { LandingPage } from "./pages/LandingPage";
 import { LoginPage } from "./pages/Login/index";
 import { RoadmapPage } from "./pages/RoadmapPage/index";
 import TaskCard from "./pages/TaskCard/TaskCard"
-
+import Articles from "./pages/Articles/index";
 function App() {
   return (
       <Router>
@@ -13,7 +13,9 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/roadmap" element={<RoadmapPage />} />
-            <Route path="/:task" element={<TaskCard />} />          </>
+            <Route path="/:task" element={<TaskCard />} />
+            <Route path="/articles" element={<Articles />} />
+            </>
         </Routes>
       </Router>
   );
