@@ -33,13 +33,13 @@ export const RoadmapPage = () => {
           <div className="overlap-group">
             <Tabs>
               <TabList className={"flex w-full mb-16"}>
-                <Tab className={"flex-1 px-12 py-6 text-center bg-[#F5F7F8] rounded-tl-3xl rounded-tr-3xl"}>
+                <Tab className={"cursor-pointer flex-1 px-12 py-6 text-center bg-[#F5F7F8] rounded-tl-3xl rounded-tr-3xl"}>
                   <div className="pb-6 text-primary-blue font-bold text-4xl border-b-2 border-solid border-b-primary-blue">Free Flowing</div>
                   <div className="text-primary-blue py-5 font-inter text-xl font-light">
                     Dip in and out and complete whatever tasks you like whenever you want!
                   </div>
                 </Tab>
-                <Tab className={"flex-1 px-12 py-6 text-center bg-[#F5F7F8] rounded-tl-3xl rounded-tr-3xl"}>
+                <Tab className={"cursor-pointer flex-1 px-12 py-6 text-center bg-[#F5F7F8] rounded-tl-3xl rounded-tr-3xl"}>
                   <div className="pb-6 text-primary-blue font-bold text-4xl border-b-2 border-solid border-b-primary-blue">Linear Path</div>
                   <div className="text-primary-blue py-5 font-inter text-xl font-light">
                     Banish overwhelm. Complete each task one step at a time to unlock the next step.
