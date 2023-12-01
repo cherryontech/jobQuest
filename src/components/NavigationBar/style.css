@@ -1,0 +1,44 @@
+.logo-text {
+  color: #001561;
+  text-align: center;
+  font-family: Lato;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 20px; /* 62.5% */
+}
+
+.login-text {
+text-align: center;
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+background: #090459;
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.signup-text {
+  color: #090459;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  border-radius: 10px;
+  border: 2px solid #090459;
+  background: #FFF;
+}
+
+.nav-button {
+  display: flex;
+  width: 86px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
