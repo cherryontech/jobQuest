@@ -5,6 +5,8 @@ import { LinearPathCard } from "../../components/LinearPathCard";
 import { ScrollShadow } from "@nextui-org/react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import roadmapImg from "../../assets/RoadmapHeroImage.png";
+import mascot from "../../assets/RoadmapMascot.png";
 
 export const RoadmapPage = () => {
   return (
@@ -15,7 +17,7 @@ export const RoadmapPage = () => {
         All you need for job search success in one place!
       </p>
 
-      <img className="img" src="src/assets/RoadmapHeroImage.png" />
+      <img className="img" src={roadmapImg} />
 
       <div className="overlap">
         <div className="page-BG" />
@@ -68,7 +70,7 @@ export const RoadmapPage = () => {
         <img
           className="JQ-final-colors"
           alt="Jq final colors"
-          src="src/assets/RoadmapMascot.png"
+          src={mascot}
         />
       </div>
     </div>
