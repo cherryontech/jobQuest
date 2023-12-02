@@ -18,9 +18,11 @@ export const NavigationBar = () => {
   useEffect(() => {
     const loginStatus = localStorage.getItem("loginStatus"); //this will always return a string so it needs to be coerced
     setIsLoggedIn(loginStatus === "true");
-  }, []);
+  });
 
   return (
+    <div className="top-nav-bar">
+    <div className="div-wrapper">
     <Navbar>
       <NavbarBrand>
         <div
@@ -34,13 +36,12 @@ export const NavigationBar = () => {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {isLoggedin ? (
           <NavbarItem className="nav-button mt-5">
-            <Button
-              onClick={() => {
-                localStorage.setItem("loginStatus", false);
-                navigateTo("/login");
-              }}
-              className="signup-text"
-            >
+            <Button 
+            onClick={() => {
+              localStorage.setItem("loginStatus", false);
+              navigateTo("/login");
+            }}
+            className="signup-text">
               Log Out
             </Button>
           </NavbarItem>
@@ -60,5 +61,11 @@ export const NavigationBar = () => {
         )}
       </NavbarContent>
     </Navbar>
+    </div>
+  </div>
   );
+};
+
+NavigationBar.propTypes = {
+  isLoggedin: PropTypes.bool,
 };
