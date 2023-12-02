@@ -23,7 +23,7 @@ let userSchema = object({
   password: string().required("Password Is Required").label("password"),
 });
 
-export const LoginPage = () => {
+export const SignupPage = () => {
   const [userInfo, setUserInfo] = React.useState({
     email: "",
     password: "",
@@ -55,22 +55,24 @@ export const LoginPage = () => {
       let result = await userSchema.validate(userInfo, { abortEarly: false });
 
       const email = localStorage.getItem("jobQuestEmail");
-      const password = localStorage.getItem("jobQuestPassword");
 
       //if user credentials has not been previously stored to localStorage, store and still log them in
-
-      if (email === result.email && password === result.password) {
-        navigateTo("/roadmap");
+      if (!email) {
+        localStorage.setItem("jobQuestEmail", result.email);
+        localStorage.setItem("jobQuestPassword", result.password);
         localStorage.setItem("loginStatus", true);
-      } else {
-        const field = "loginFailed";
+        navigateTo("/roadmap");
+      }
+      //else let the user know an account already exists with the credentials they inputted.
+      else {
+        const field = "signUpFailed";
         setErrors((prev) => ({
           ...prev,
-          [field]: "Incorrect Username/Password",
+          [field]: "An account already exists with this email address",
         }));
         localStorage.setItem("loginStatus", false);
+        setIsLoading(false);
       }
-      setIsLoading(false);
     } catch (err) {
       for (const e of err.inner) {
         let field = e.path;
@@ -114,12 +116,12 @@ export const LoginPage = () => {
             color: "#25274D",
           }}
         >
-          Welcome Back!
+          Create An Account
         </h1>
         <p className="m-4">
-          Each time you login -
+          Create an account to keep track of
           <br />
-          you are making progress towards your goals.
+          your job search journey - for free!{" "}
         </p>
 
         <Input
@@ -160,16 +162,10 @@ export const LoginPage = () => {
           }
           type={isVisible ? "text" : "password"}
         />
-        {errors.loginFailed && (
-          <div className="text-red-500 text-right">{errors.loginFailed}</div>
+        {errors.signUpFailed && (
+          <div className="text-red-500 text-right">{errors.signUpFailed}</div>
         )}
-        <p className="text-left m-2">
-          Forgot your password?{" "}
-          <span className="text-[#FF6667] cursor-pointer underline font-bold">
-            {" "}
-            Reset
-          </span>
-        </p>
+
         <Button
           onClick={handleSubmit}
           size="lg"
@@ -182,13 +178,13 @@ export const LoginPage = () => {
           Log In
         </Button>
         <p className=" m-2">
-          Need an account?{" "}
+          Already have an account?{" "}
           <span
             className="text-[#FF6667] cursor-pointer underline font-bold"
-            onClick={() => navigateTo("/signup")}
+            onClick={() => navigateTo("/login")}
           >
             {" "}
-            Create Account
+            Log In
           </span>
         </p>
       </div>
