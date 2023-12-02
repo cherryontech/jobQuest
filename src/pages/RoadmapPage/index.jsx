@@ -5,7 +5,6 @@ import { LinearPathCard } from "../../components/LinearPathCard";
 import { ScrollShadow } from "@nextui-org/react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import { NavigationBar } from "../../components/NavigationBar";
 
 export const RoadmapPage = () => {
   return (
@@ -15,12 +14,6 @@ export const RoadmapPage = () => {
       <p className="header-sub-text">
         All you need for job search success in one place!
       </p>
-
-      <div className="top-nav-bar">
-      <div className="div-wrapper">
-      <NavigationBar />
-        </div>
-      </div>
 
       <img className="img" src="src/assets/RoadmapHeroImage.png" />
 

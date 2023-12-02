@@ -14,19 +14,6 @@
     width: 1440px;
   }
   
-  .landing-page .top-nav-bar {
-    height: 84px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 1440px;
-  }
-  
-  .landing-page .div-wrapper {
-    height: 84px;
-    position: relative;
-  }
-  
   .landing-page .text-wrapper {
     color: #001561;
     font-family: "Lato", Helvetica;

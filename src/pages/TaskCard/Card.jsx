@@ -54,7 +54,7 @@ export default function TCard({
   };
 
   return (
-    <div key={index} className="flex justify-around m-5 ">
+    <div key={index} className="flex justify-around m-5 z-0">
       <Card
         shadow="none"
         className={`w-5/6`}
@@ -71,7 +71,7 @@ export default function TCard({
           }`,
         }}
       >
-        <CardHeader className="flex justify-between items-center px-3">
+        <CardHeader className="flex justify-between items-center px-3 z-0">
           <div className="flex ">
             <Checkbox
               isSelected={isChecked}

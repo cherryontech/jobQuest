@@ -42,3 +42,18 @@ background-clip: text;
   align-items: center;
   flex-shrink: 0;
 }
+
+.top-nav-bar {
+  height: 98px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 1440px;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.div-wrapper {
+  height: 98px;
+  position: relative;
+}
