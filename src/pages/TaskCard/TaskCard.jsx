@@ -42,8 +42,7 @@ export default function TaskCard() {
     };
     const fetchTaskJsonFile = async () => {
       try {
-        const response = (await import(`./${task}.json` /*@vite-ignore*/))
-          .default;
+        const response = (await import(`./module-${task}.json`)).default;
         setTaskCardData(response);
       } catch (err) {
         console.log(`error retrieving ${task} json file, ${err}`);

@@ -1,6 +1,6 @@
 [
   {
-    "image": "src/assets/articles1.png",
+    "image": "/articles1.png",
     "title": "12 Ways to Make Your LinkedIn Profile Stand Out",
     "writer": "Ken Chase",
     "quote": "An excellent, concise resource with clear and actionable steps to take...",
@@ -8,7 +8,7 @@
     "clickable": "Read More"
   },
   {
-    "image": "src/assets/articles2.png",
+    "image": "/articles2.png",
     "title": "Build a BETTER LinkedIn Profile",
     "writer": "Professor Heather Austin",
     "quote": "A 9 minute Youtube video that shares 7 parts of your LinkedIn profile that must be optimized....",
@@ -16,7 +16,7 @@
     "clickable": "Watch More"
   },
   {
-    "image": "src/assets/articles3.png",
+    "image": "/articles3.png",
     "title": "How to Personalize Your LinkedIn Profile URL",
     "writer": "Lissa Appiah",
     "quote": "A 1 minute video to help you personalize your LinkedIn URL...",
@@ -24,7 +24,7 @@
     "clickable": "Read More"
   },
   {
-    "image": "src/assets/articles4.png",
+    "image": "/articles4.png",
     "title": "15 LinkedIn Tips and Tricks",
     "writer": "Jesse Sumrak",
     "quote": "Uncovering LinkedIn’s secret tips to help you grow your personal brand and help you stand out....",
@@ -32,7 +32,7 @@
     "clickable": "Read More"
   },
   {
-    "image": "src/assets/articles5.png",
+    "image": "/articles5.png",
     "title": "Updating Your Profile on LinkedIn: Skills you should (and shouldn’t) add",
     "writer": "Zoe Kaplan",
     "quote": "Explaining what skills to add and how to add them...",
@@ -40,7 +40,7 @@
     "clickable": "Read More"
   },
   {
-    "image": "src/assets/articles6.png",
+    "image": "/articles6.png",
     "title": "Top Skills You Should Add to your LinkedIn Profile",
     "writer": "Natasha Balode",
     "quote": "A long list of skills organised by categories...",
@@ -48,7 +48,7 @@
     "clickable": "Read More"
   },
   {
-    "image": "src/assets/articles7.png",
+    "image": "/articles7.png",
     "title": "How to Design a Professional LinkedIn Banner Using Canva",
     "writer": "eStoreKings",
     "quote": "A YouTube video to show you how to create a professional LinkedIn banner using Canva... ",
@@ -56,7 +56,7 @@
     "clickable": "Watch More"
   },
   {
-    "image": "src/assets/articles8.png",
+    "image": "/articles8.png",
     "title": "How to Make a Professional LinkedIn Banner",
     "writer": "Creator Canvas",
     "quote": "A 3 minute YouTube video that shows how to use Canva in minutes to create a great LinkedIn banner...",
