@@ -65,11 +65,19 @@ export const SignupPage = () => {
       }
       //else let the user know an account already exists with the credentials they inputted.
       else {
-        const field = "signUpFailed";
-        setErrors((prev) => ({
-          ...prev,
-          [field]: "An account already exists with this email address",
-        }));
+        if (email == result.email) {
+          const field = "signUpFailed";
+          setErrors((prev) => ({
+            ...prev,
+            [field]: "An account already exists with this email address",
+          }));
+        } else {
+          const field = "signUpFailed";
+          setErrors((prev) => ({
+            ...prev,
+            [field]: "An account already exists",
+          }));
+        }
         localStorage.setItem("loginStatus", false);
         setIsLoading(false);
       }
