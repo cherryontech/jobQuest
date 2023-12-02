@@ -77,7 +77,7 @@ export default function TaskCard() {
             You only get one shot at a first impression, so make it count!
           </p>
         </div>
-        <div className="w-2/5">
+        <div className="w-2/5 z-0">
           <Image src={mascot} sizes={"md"} />
         </div>
       </div>

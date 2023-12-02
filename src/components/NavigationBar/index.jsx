@@ -21,6 +21,8 @@ export const NavigationBar = () => {
   }, []);
 
   return (
+    <div className="top-nav-bar">
+    <div className="div-wrapper">
     <Navbar>
       <NavbarBrand>
         <div
@@ -45,12 +47,12 @@ export const NavigationBar = () => {
           </NavbarItem>
         ) : (
           <>
-            <NavbarItem className="nav-button mt-5">
+            <NavbarItem className="nav-button mt-20 mb-20">
               <Link color="login" href="/login" className="login-text">
                 Login
               </Link>
             </NavbarItem>
-            <NavbarItem className="nav-button mt-5">
+            <NavbarItem className="nav-button mt-20 mb-20">
               <Button as={Link} href="/signup" className="signup-text">
                 Sign Up
               </Button>
@@ -59,6 +61,8 @@ export const NavigationBar = () => {
         )}
       </NavbarContent>
     </Navbar>
+    </div>
+  </div>
   );
 };
 

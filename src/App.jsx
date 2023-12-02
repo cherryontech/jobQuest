@@ -5,9 +5,11 @@ import { LoginPage } from "./pages/Login/index";
 import { RoadmapPage } from "./pages/RoadmapPage/index";
 import TaskCard from "./pages/TaskCard/TaskCard"
 import Articles from "./pages/Articles/index";
+import { NavigationBar } from "./components/NavigationBar";
 function App() {
   return (
-      <Router>
+    <Router>
+            <NavigationBar />
         <Routes>
           <>
             <Route path="/" element={<LandingPage />} />
