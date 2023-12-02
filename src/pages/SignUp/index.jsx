@@ -141,6 +141,7 @@ export const SignupPage = () => {
           isRequired
           isInvalid={errors.email && true}
           errorMessage={errors.email}
+          autoComplete='email'
           type="email"
           label="Email Address"
         />
@@ -154,6 +155,7 @@ export const SignupPage = () => {
           isRequired
           isInvalid={errors.password && true}
           errorMessage={errors.password}
+          autoComplete='new-password'
           label="Password"
           endContent={
             <button

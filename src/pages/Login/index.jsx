@@ -129,6 +129,7 @@ export const LoginPage = () => {
           value={userInfo.email}
           className="m-3"
           isRequired
+          autoComplete='email'
           isInvalid={errors.email && true}
           errorMessage={errors.email}
           type="email"
@@ -143,6 +144,7 @@ export const LoginPage = () => {
           className="m-3"
           isRequired
           isInvalid={errors.password && true}
+          autoComplete='current-password'
           errorMessage={errors.password}
           label="Password"
           endContent={
