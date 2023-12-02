@@ -7,8 +7,8 @@ import { object, string } from "yup";
 
 //nextUI components
 import { Image, Input, Button } from "@nextui-org/react";
-import { EyeFilledIcon } from "./EyeFilledIcon";
-import { EyeSlashFilledIcon } from "./EyeSlashFilledIcon";
+import { EyeFilledIcon } from "../../components/Eye/EyeFilledIcon";
+import { EyeSlashFilledIcon } from "../../components/Eye/EyeSlashFilledIcon";
 
 import authBackground from "../../assets/authBackground.png";
 
