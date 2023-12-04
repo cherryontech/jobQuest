@@ -1,5 +1,6 @@
-import { CircularProgress } from "@nextui-org/react";
+import { CircularProgress, Image } from "@nextui-org/react";
 import { useEffect, useState } from "react";
+import completeCheck from "../../assets/coraltick.png";
 export const PercentageScore = ({ color, value }) => {
   const [track, setTrack] = useState("");
 
@@ -21,19 +22,23 @@ export const PercentageScore = ({ color, value }) => {
     setTrack(t);
   }, [color]);
   return (
-    <div style={{ width: 50, height: 50, position: "relative" }}>
-      <CircularProgress
-        aria-label="Task Percentage"
-        size="lg"
-        value={value}
-        classNames={{
-          svg: "w-16 h-16 drop-shadow-md",
-          value: `text-1xl font-bold ${color !== "warning" && "text-black"}`,
-          track: track,
-        }}
-        className={`text-${color}`}
-        showValueLabel={true}
-      />
+    <div className="w-12 h-12 relative z-0">
+      {value === 100 ? (
+        <Image src={completeCheck} alt="completed task" />
+      ) : (
+        <CircularProgress
+          aria-label="Task Percentage"
+          size="lg"
+          value={value}
+          classNames={{
+            svg: "w-16 h-16 drop-shadow-md",
+            value: `text-1xl font-bold ${color !== "warning" && "text-black"}`,
+            track: track,
+          }}
+          className={`text-${color}`}
+          showValueLabel={true}
+        />
+      )}
     </div>
   );
 };
