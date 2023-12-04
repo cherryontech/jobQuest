@@ -9,16 +9,17 @@ import {
   Button,
 } from "@nextui-org/react";
 import "./style.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export const NavigationBar = () => {
   const navigateTo = useNavigate();
+  const location = useLocation();
   const [isLoggedin, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    const loginStatus = localStorage.getItem("loginStatus"); //this will always return a string so it needs to be coerced
+    const loginStatus = localStorage.getItem("loginStatus");
     setIsLoggedIn(loginStatus === "true");
-  }, []);
+  }, [location.pathname]);
 
   return (
     <div className="top-nav-bar">
@@ -67,5 +68,5 @@ export const NavigationBar = () => {
 };
 
 NavigationBar.propTypes = {
-  isLoggedin: PropTypes.boolean,
+  isLoggedin: PropTypes.bool,
 };

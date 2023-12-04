@@ -22,7 +22,7 @@ export default function Articles() {
     }, [])
     
   return (
-    <div className="p-10 " style={{ backgroundColor: "#D9E2F3" }}>
+    <div className="p-10 mt-20" style={{ backgroundColor: "#D9E2F3" }}>
       <div className="w-4/6 m-auto ">
         <p className=" text-gray opacity-50 mb-10">
           <span
