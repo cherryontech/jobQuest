@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Image, CircularProgress } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 import { useNavigate, useParams } from "react-router-dom";
+import { PercentageScore } from "../../components/PercentageScore/index";
 
 import Resource from "./Card";
 
 import mascot from "../../assets/finalHomepage.png";
+
+import { fetchPercentage } from "../../components/PercentageScore/fetchPercentage";
 
 export default function TaskCard() {
   const { task } = useParams();
@@ -14,18 +17,8 @@ export default function TaskCard() {
   const [resourceColor, setResourceColor] = useState();
   const navigateTo = useNavigate();
 
-  // placeholder
-  // percentage of tasks the user has completed
   useEffect(() => {
-    let i = 0;
-    for (const key in resource) {
-      if (resource[key]) {
-        i += 1;
-      }
-
-      const percent = (i / taskCardData.length) * 100;
-      setValue(percent);
-    }
+    fetchPercentage(task, setValue);
   }, [resource, taskCardData]);
 
   useEffect(() => {
@@ -116,16 +109,7 @@ export default function TaskCard() {
           style={{ borderRadius: "30px" }}
         >
           <div className=" m-5 flex justify-end px-20">
-            <CircularProgress
-              aria-label="Task Percentage"
-              size="lg"
-              value={value}
-              classNames={{
-                value: `font-bold text-black`
-              }}
-              className={`text-${resourceColor}`}
-              showValueLabel={true}
-            />
+            <PercentageScore value={value} color={resourceColor} />
           </div>
           {taskCardData.map((subCard, index) => (
             <Resource

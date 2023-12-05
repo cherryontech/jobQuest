@@ -28,6 +28,7 @@ module.exports = {
             danger: "#FF6667",
             success: "#3E7CD9",
             secondary: "#36CC96",
+            warning: "#25274C"
           },
         },
         dark: {
