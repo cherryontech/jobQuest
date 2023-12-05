@@ -44,7 +44,7 @@ export const RoadmapPage = () => {
               <div className="mb-16">
                 <TabPanel className={"px-8"}>
                   <div className="freeflowing-card-grid">
-                  <FreeflowingCard cardName={"Linkedin"} cardUrl="linkedin" className="freeflowing-card"/>
+                  <FreeflowingCard cardName={"LinkedIn"} cardUrl="linkedin" className="freeflowing-card"/>
                   <FreeflowingCard cardName={"Resume"} cardUrl="resume" className="freeflowing-card"/>
                   <FreeflowingCard cardName={"Interview Prep"} cardUrl="interview-prep" className="freeflowing-card"/>
                   <FreeflowingCard cardName={"Application Advice"} cardUrl="application-advice" className="freeflowing-card"/>
@@ -54,7 +54,7 @@ export const RoadmapPage = () => {
                 </TabPanel>
                 <TabPanel className={"px-32"}>
                   <ScrollShadow className="w-[750px] h-[544px] scrollbar" size="24">
-                    <LinearPathCard cardName={"Linkedin"} cardUrl="linkedin"/>
+                    <LinearPathCard cardName={"LinkedIn"} cardUrl="linkedin"/>
                     <LinearPathCard cardName={"Resume"} cardUrl="resume"/>
                     <LinearPathCard cardName={"Interview Prep"} cardUrl="interview-prep"/>
                     <LinearPathCard cardName={"Application Advice"} cardUrl="application-advice"/>
