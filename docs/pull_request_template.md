@@ -20,7 +20,7 @@
 
 
 ## To Review
-<!-- All team members will be automatically tagged as reviewers but you can @mentions members here if you want a review fronm specific people -->
+<!-- All team members will be automatically tagged as reviewers but you can @mentions members here if you want a review from specific people -->
 
 
 <!--  Thanks for sending a pull request! -->
