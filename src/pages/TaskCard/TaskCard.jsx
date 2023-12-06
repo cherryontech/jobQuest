@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Image } from "@nextui-org/react";
 import { useNavigate, useParams } from "react-router-dom";
+import { Image } from "@nextui-org/react";
 import { PercentageScore } from "../../components/PercentageScore/index";
 
 import Resource from "./Card";
@@ -11,6 +11,7 @@ import { fetchPercentage } from "../../components/PercentageScore/fetchPercentag
 
 export default function TaskCard() {
   const { task } = useParams();
+  const [isDisabled, setIsDisabled] = useState(0);
   const [taskCardData, setTaskCardData] = useState([]);
   const [resource, setResource] = useState({});
   const [value, setValue] = React.useState(0);
@@ -24,13 +25,18 @@ export default function TaskCard() {
   useEffect(() => {
     const fetchResourceInfo = () => {
       let res = JSON.parse(localStorage.getItem(task));
+      let numberEnabled = JSON.parse(localStorage.getItem(`${task}Enabled`));
+
+
       //on initial render set the key/value pairs of cards in localStorage
       if (!res) {
         res = {};
         localStorage.setItem(task, JSON.stringify(res));
+        localStorage.setItem(`${task}Enabled`, JSON.stringify(0));
       } else {
         //else grab what's already in localStorage and render
         setResource(res);
+        setIsDisabled(numberEnabled)
       }
     };
     const fetchTaskJsonFile = async () => {
@@ -118,6 +124,8 @@ export default function TaskCard() {
               index={index}
               task={task}
               resource={resource}
+              isDisabled={isDisabled}
+              setIsDisabled={setIsDisabled}
               resourceColor={resourceColor}
               checked={resource[`card${index}`]}
               setResource={setResource}
