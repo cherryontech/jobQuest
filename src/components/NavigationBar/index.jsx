@@ -36,7 +36,7 @@ export const NavigationBar = () => {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {isLoggedin ? (
-          <NavbarItem className="nav-button mt-5">
+          <NavbarItem className="nav-button mt-20 mb-20">
             <Button 
             onClick={() => {
               localStorage.setItem("loginStatus", false);
