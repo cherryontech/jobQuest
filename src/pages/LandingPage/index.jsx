@@ -1,4 +1,5 @@
 import { Buttons } from "../../components/Buttons";
+import { Footer } from "../../components/Footer";
 import "./style.css";
 import finalHomepage from "../../assets/finalHomepage.png";
 import { useNavigate } from "react-router-dom";
@@ -26,6 +27,7 @@ export const LandingPage = () => {
           />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

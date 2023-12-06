@@ -10,7 +10,7 @@ import {
 } from "@nextui-org/react";
 import "./style.css";
 import { useNavigate, useLocation } from "react-router-dom";
-import logo from "../assets/logo.svg";
+import logo from "../../assets/logo.svg";
 
 
 export const NavigationBar = () => {
