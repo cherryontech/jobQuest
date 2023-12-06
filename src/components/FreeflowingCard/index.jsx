@@ -22,7 +22,7 @@ export const FreeflowingCard = ({ cardName, cardUrl }) => {
     const loginStatus = localStorage.getItem("loginStatus");
 
     if (loginStatus === "true") {
-      navigateTo(`/${cardUrl}`);
+      navigateTo(`/free-flowing/${cardUrl}`);
     } else {
       onOpen();
     }

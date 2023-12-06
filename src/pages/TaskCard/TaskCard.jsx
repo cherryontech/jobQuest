@@ -10,7 +10,7 @@ import mascot from "../../assets/finalHomepage.png";
 import { fetchPercentage } from "../../components/PercentageScore/fetchPercentage";
 
 export default function TaskCard() {
-  const { task } = useParams();
+  const { task, path } = useParams();
   const [isDisabled, setIsDisabled] = useState(0);
   const [taskCardData, setTaskCardData] = useState([]);
   const [resource, setResource] = useState({});
@@ -36,7 +36,7 @@ export default function TaskCard() {
         } else {
           //else grab what's already in localStorage and render
           setResource(res);
-          setIsDisabled(numberEnabled);
+          setIsDisabled(path === 'free-flowing' ? null : numberEnabled);
         }
       };
       const fetchTaskJsonFile = async () => {
@@ -56,7 +56,6 @@ export default function TaskCard() {
           ? "success"
           : "secondary"
       );
-
       fetchResourceInfo();
       fetchTaskJsonFile();
     
@@ -94,7 +93,7 @@ export default function TaskCard() {
               className="hover:text-[#FF6667] hover:opacity-100 hover:cursor-pointer"
               onClick={() => navigateTo("/roadmap")}
             >
-              Linear Path
+             {path === 'free-flowing' ? 'Free Flowing' : `${path.charAt(0).toUpperCase()}${path.slice(1)}`}
             </span>
           </p>
           <br />

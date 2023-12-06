@@ -63,7 +63,7 @@ export default function TCard({
   return (
     <div key={index} className="flex justify-around m-5 z-0">
       <Card
-        isDisabled={isDisabled < index}
+        isDisabled={isDisabled && isDisabled < index}
         shadow="none"
         className={`w-5/6`}
         style={{
@@ -82,7 +82,7 @@ export default function TCard({
         <CardHeader className="flex justify-between items-center px-3 z-0">
           <div className="flex ">
             <Checkbox
-              isDisabled={isDisabled < index}
+              isDisabled={isDisabled && isDisabled < index}
               isSelected={isChecked}
               onValueChange={handleCheckboxChange(`card${index}`)}
               size="lg"
@@ -93,7 +93,7 @@ export default function TCard({
             <p className="text-md font-bold">{subCard.title}</p>
           </div>
           <Button
-            isDisabled={isDisabled < index}
+            isDisabled={isDisabled && isDisabled < index}
             onClick={() => setIsVisible(!isVisible)}
             className={`bg-transparent text-${resourceColor}`}
           >

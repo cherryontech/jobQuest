@@ -37,7 +37,7 @@ export const LinearPathCard = ({
     const loginStatus = localStorage.getItem("loginStatus");
 
     if (loginStatus === "true") {
-      navigateTo(`/${cardUrl}`);
+      navigateTo(`/linear/${cardUrl}`);
     } else {
       onOpen();
     }
