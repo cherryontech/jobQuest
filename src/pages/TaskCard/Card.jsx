@@ -49,7 +49,6 @@ export default function TCard({
 
   const handleCheckboxChange = (key) => (event) => {
     setIsChecked(event);
-    console.log(event && index === isDisabled, 'here')
     if (event && index === isDisabled) {
       localStorage.setItem(`${task}Enabled`, JSON.stringify(isDisabled + 1));
       setIsDisabled((prev) => prev + 1)
