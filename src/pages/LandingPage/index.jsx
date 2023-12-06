@@ -8,7 +8,8 @@ export const LandingPage = () => {
   const navigateTo = useNavigate();
 
   return (
-    <div className="landing-page">
+    <>
+    <div className="landing-page mb-12">
       <div className="div">
         <div className="overlap">
           <div className="landing-section">
@@ -27,7 +28,8 @@ export const LandingPage = () => {
           />
         </div>
       </div>
-      <Footer />
     </div>
+    <Footer />
+    </>
   );
 };
