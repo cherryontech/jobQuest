@@ -77,7 +77,7 @@ export default function Articles() {
                 <br />
                 <p className="text-[#25274C]">
                   {article.quote}{" "}
-                  <a href={article.link} className="text-danger cursor-pointer">
+                  <a href={article.link} className="text-danger cursor-pointer" target="_blank" rel="noreferrer">
                     {article.clickable}
                   </a>
                 </p>
