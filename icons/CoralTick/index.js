@@ -1,1 +1,0 @@
-export { CoralTick } from "./CoralTick";
