@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <div className="bg-[#DEE6F4] w-full h-96 py-8 px-16 absolute">
       <div className="relative">
-        <div className="mb-5">
+        <div className="mb-10">
           <img className="" alt="logo" src={logo} />
         </div>
 
@@ -15,11 +15,20 @@ export const Footer = () => {
           <div className="grid-cols-8">
             {" "}
             {/* 8 columns, border-right  */}
-            <div className="grid-cols-2 mb-7 text-primary-blue font-bold font-inter">
+            <div className="col-start-1 col-end-3 text-primary-blue font-bold font-inter">
               For Job Seekers
             </div>
-            <ol className="grid-cols-2 mb-5 text-primary-blue font-inter">
-              <li>Career Advice</li> 
+            <ol className="col-start-1 col-end-3 text-primary-blue font-inter">
+              <li>Career Advice</li>
+              <li>Job Search Guidance</li>
+              <li>Your Job Profile </li>
+              <li>Help</li>
+            </ol>
+            <div className="col-start-3 col-end-5 text-primary-blue font-bold font-inter">
+              For Job Seekers
+            </div>
+            <ol className="col-start-3 col-end-5 text-primary-blue font-inter">
+              <li>Career Advice</li>
               <li>Job Search Guidance</li>
               <li>Your Job Profile </li>
               <li>Help</li>
