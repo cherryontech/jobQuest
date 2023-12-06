@@ -9,25 +9,25 @@ export const Footer = () => {
         </div>
 
         {/* container */}
-        <div className="grid-cols-12">
+        <div className="grid grid-cols-12">
           {" "}
           {/* 12 columns */}
-          <div className="grid-cols-8">
+          <div className="grid grid-cols-8 col-span-8">
             {" "}
             {/* 8 columns, border-right  */}
-            <div className="col-start-1 col-end-3 text-primary-blue font-bold font-inter">
+            <div className="grid col-span-1 text-primary-blue font-bold font-inter">
               For Job Seekers
             </div>
-            <ol className="col-start-1 col-end-3 text-primary-blue font-inter">
+            <ol className="grid text-primary-blue font-inter">
               <li>Career Advice</li>
               <li>Job Search Guidance</li>
               <li>Your Job Profile </li>
               <li>Help</li>
             </ol>
-            <div className="col-start-3 col-end-5 text-primary-blue font-bold font-inter">
+            <div className="grid col-span-1 text-primary-blue font-bold font-inter">
               For Job Seekers
             </div>
-            <ol className="col-start-3 col-end-5 text-primary-blue font-inter">
+            <ol className="grid text-primary-blue font-inter">
               <li>Career Advice</li>
               <li>Job Search Guidance</li>
               <li>Your Job Profile </li>
