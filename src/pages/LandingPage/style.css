@@ -1,6 +1,7 @@
 .homepage {
   overflow-y: scroll;
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .landing-page {
@@ -9,6 +10,8 @@
     flex-direction: row;
     justify-content: left;
     width: 100%;
+    min-height: 100vh;
+    position: relative;
   }
   
   .landing-page .div {
@@ -116,13 +119,10 @@
   }
 
   .footer {
+    margin-top: auto;
     background-color: #dee6f4;
     height: 763px;
     width: 1440px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;   
   }
   
   .footer .info {
@@ -132,7 +132,7 @@
     width: 1212px;
   }
   .footer .menu-footer{
-    display: grid;
+    display: -ms-flexbox;
     justify-items: left;
 
   }
