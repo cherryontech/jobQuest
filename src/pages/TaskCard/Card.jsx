@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import {
   Card,
   CardHeader,
@@ -11,7 +13,6 @@ import {
 //fontAwesome icons for the dropdown menu
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
 
 export default function TCard({
   setResource,
@@ -21,12 +22,14 @@ export default function TCard({
   subCard,
   index,
   checked,
+  isDisabled,
+  setIsDisabled,
 }) {
   //for dropdown
   const [isVisible, setIsVisible] = useState(false);
   const [isChecked, setIsChecked] = useState(checked);
   const [wrapper, setWrapper] = useState("");
-  const navigateTo = useNavigate()
+  const navigateTo = useNavigate();
 
   //updates checked after initial render of task page
   useEffect(() => {
@@ -46,6 +49,10 @@ export default function TCard({
 
   const handleCheckboxChange = (key) => (event) => {
     setIsChecked(event);
+    if (event && index === isDisabled) {
+      localStorage.setItem(`${task}Enabled`, JSON.stringify(isDisabled + 1));
+      setIsDisabled((prev) => prev + 1)
+    }
     //update new state change within object
     const updatedInfo = { ...resource, [key]: event };
     setResource(updatedInfo);
@@ -56,6 +63,7 @@ export default function TCard({
   return (
     <div key={index} className="flex justify-around m-5 z-0">
       <Card
+        isDisabled={isDisabled && isDisabled < index}
         shadow="none"
         className={`w-5/6`}
         style={{
@@ -74,6 +82,7 @@ export default function TCard({
         <CardHeader className="flex justify-between items-center px-3 z-0">
           <div className="flex ">
             <Checkbox
+              isDisabled={isDisabled && isDisabled < index}
               isSelected={isChecked}
               onValueChange={handleCheckboxChange(`card${index}`)}
               size="lg"
@@ -84,6 +93,7 @@ export default function TCard({
             <p className="text-md font-bold">{subCard.title}</p>
           </div>
           <Button
+            isDisabled={isDisabled && isDisabled < index}
             onClick={() => setIsVisible(!isVisible)}
             className={`bg-transparent text-${resourceColor}`}
           >
@@ -115,7 +125,7 @@ export default function TCard({
                     <Button
                       onClick={
                         subCard.button === "See Articles"
-                          ? () => navigateTo('/articles')
+                          ? () => navigateTo("/articles")
                           : undefined
                       }
                       className={`text-white w-1/6 bg-${resourceColor}`}
