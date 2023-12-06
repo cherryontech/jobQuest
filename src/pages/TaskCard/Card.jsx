@@ -63,7 +63,7 @@ export default function TCard({
   return (
     <div key={index} className="flex justify-around m-5 z-0">
       <Card
-        isDisabled={isDisabled && isDisabled < index}
+        isDisabled={isDisabled != null && isDisabled < index}
         shadow="none"
         className={`w-5/6`}
         style={{
