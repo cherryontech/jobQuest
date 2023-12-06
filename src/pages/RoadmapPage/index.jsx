@@ -10,7 +10,7 @@ import mascot from "../../assets/RoadmapMascot.png";
 
 export const RoadmapPage = () => {
   const [isDisabled, setIsDisabled] = useState(0);
-  console.log(isDisabled)
+  
   return (
     <div className="index">
       <p className="advice-tips">Advice, Tips &amp; Actionable Steps</p>

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
-import { Card, CardBody } from "@nextui-org/react";
+import { Card, CardBody, card } from "@nextui-org/react";
 import { PercentageScore } from "../PercentageScore";
 import { fetchPercentage } from "../PercentageScore/fetchPercentage";
 import "./style.css";
@@ -15,7 +15,6 @@ export const LinearPathCard = ({
   //current problem, if I open linear path go to freeflowing then back to linear path the useEffect, [value] updates and it shouldnt be updating. Need to dynamically determine if the user clicked free flowing or linear path and then determine disabling based off of that.
   const [value, setValue] = useState(0);
   const navigateTo = useNavigate();
-
   const resourceArr = {
     LinkedIn: 0,
     Resume: 1,
@@ -26,10 +25,11 @@ export const LinearPathCard = ({
   };
 
   useEffect(() => {
-    if (value === 100) {
+    if (value === 100 && !(isDisabled > resourceArr[cardName])) {
+      // Check for value and isEnabled to update isDisabled state
       setIsDisabled((prev) => prev + 1);
     }
-  }, [value]);
+  }, [value, setIsDisabled]);
 
   const checkIfLoggedIn = () => {
     const loginStatus = localStorage.getItem("loginStatus");
@@ -48,8 +48,8 @@ export const LinearPathCard = ({
 
   return (
     <Card
-      isDisabled={isDisabled < resourceArr[cardName]}
-      isPressable={!(isDisabled < resourceArr[cardName])}
+      isDisabled={!(isDisabled >= resourceArr[cardName])}
+      isPressable={(isDisabled >= resourceArr[cardName])}
       onPress={() => checkIfLoggedIn()}
       className={`linearpath-card-div ${cardUrl}`}
     >
