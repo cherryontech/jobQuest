@@ -56,7 +56,7 @@ export default function Articles() {
       </div>
 
       <div
-        className="w-4/6 m-auto bg-white p-12"
+        className="w-4/6 m-auto bg-white p-10"
         style={{ borderRadius: "30px" }}
       >
         <h1 className="text-4xl font-bold text-[#25274D] my-8 ml-7">
