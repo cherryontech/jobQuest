@@ -185,7 +185,7 @@ export const SignupPage = () => {
             backgroundColor: "#090459",
           }}
         >
-          Log In
+          Sign up
         </Button>
         <p className=" m-2">
           Already have an account?{" "}
