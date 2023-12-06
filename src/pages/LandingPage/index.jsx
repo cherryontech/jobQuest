@@ -20,7 +20,7 @@ export const LandingPage = () => {
           </div>
           <Buttons
             clickHandler={()=> navigateTo('/roadmap')}
-            buttonsSolidLargeText="Start Now"
+            buttonsSolidLargeText="Visit Roadmap"
             extraClasses="buttons-instance"
             property1="solid-large-blue"
           />
