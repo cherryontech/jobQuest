@@ -23,42 +23,43 @@ export default function TaskCard() {
   }, [resource, taskCardData]);
 
   useEffect(() => {
-    const fetchResourceInfo = () => {
-      let res = JSON.parse(localStorage.getItem(task));
-      let numberEnabled = JSON.parse(localStorage.getItem(`${task}Enabled`));
+   
+      const fetchResourceInfo = () => {
+        let res = JSON.parse(localStorage.getItem(task));
+        let numberEnabled = JSON.parse(localStorage.getItem(`${task}Enabled`));
 
+        //on initial render set the key/value pairs of cards in localStorage
+        if (!res) {
+          res = {};
+          localStorage.setItem(task, JSON.stringify(res));
+          localStorage.setItem(`${task}Enabled`, JSON.stringify(0));
+        } else {
+          //else grab what's already in localStorage and render
+          setResource(res);
+          setIsDisabled(numberEnabled);
+        }
+      };
+      const fetchTaskJsonFile = async () => {
+        try {
+          const response = (await import(`./module-${task}.json`)).default;
+          setTaskCardData(response);
+        } catch (err) {
+          console.log(`error retrieving ${task} json file, ${err}`);
+          setTaskCardData([]);
+        }
+      };
 
-      //on initial render set the key/value pairs of cards in localStorage
-      if (!res) {
-        res = {};
-        localStorage.setItem(task, JSON.stringify(res));
-        localStorage.setItem(`${task}Enabled`, JSON.stringify(0));
-      } else {
-        //else grab what's already in localStorage and render
-        setResource(res);
-        setIsDisabled(numberEnabled)
-      }
-    };
-    const fetchTaskJsonFile = async () => {
-      try {
-        const response = (await import(`./module-${task}.json`)).default;
-        setTaskCardData(response);
-      } catch (err) {
-        console.log(`error retrieving ${task} json file, ${err}`);
-        setTaskCardData([]);
-      }
-    };
+      setResourceColor(
+        task === "linkedin"
+          ? "danger"
+          : task === "resume"
+          ? "success"
+          : "secondary"
+      );
 
-    setResourceColor(
-      task === "linkedin"
-        ? "danger"
-        : task === "resume"
-        ? "success"
-        : "secondary"
-    );
-
-    fetchResourceInfo();
-    fetchTaskJsonFile();
+      fetchResourceInfo();
+      fetchTaskJsonFile();
+    
   }, [task]);
 
   return (

@@ -14,7 +14,9 @@ export const FreeflowingCard = ({ cardName, cardUrl }) => {
 
 
   useEffect(() => {
-    fetchPercentage(cardName, setValue);
+    let status = JSON.parse(localStorage.getItem('loginStatus'))
+    
+    if (status) fetchPercentage(cardName, setValue);
   }, [cardName]);
 
   const checkIfLoggedIn = () => {

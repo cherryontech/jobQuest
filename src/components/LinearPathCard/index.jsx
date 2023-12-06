@@ -45,7 +45,9 @@ export const LinearPathCard = ({
   };
 
   useEffect(() => {
-    fetchPercentage(cardName, setValue);
+    let status = JSON.parse(localStorage.getItem('loginStatus'))
+    
+    if (status) fetchPercentage(cardName, setValue);
   }, [cardName]);
 
   return (
