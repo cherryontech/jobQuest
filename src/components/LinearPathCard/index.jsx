@@ -13,7 +13,6 @@ export const LinearPathCard = ({
   isDisabled,
   setIsDisabled,
 }) => {
-  //current problem, if I open linear path go to freeflowing then back to linear path the useEffect, [value] updates and it shouldnt be updating. Need to dynamically determine if the user clicked free flowing or linear path and then determine disabling based off of that.
   const [value, setValue] = useState(0);
   const navigateTo = useNavigate();
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -28,8 +27,8 @@ export const LinearPathCard = ({
   };
 
   useEffect(() => {
+    //updates if the card is not enabled
     if (value === 100 && !(isDisabled > resourceArr[cardName])) {
-      // Check for value and isEnabled to update isDisabled state
       setIsDisabled((prev) => prev + 1);
     }
   }, [value, setIsDisabled]);
@@ -46,7 +45,6 @@ export const LinearPathCard = ({
 
   useEffect(() => {
     let status = JSON.parse(localStorage.getItem('loginStatus'))
-    
     if (status) fetchPercentage(cardName, setValue);
   }, [cardName]);
 
