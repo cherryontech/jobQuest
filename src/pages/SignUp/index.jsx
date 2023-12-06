@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import { XClose } from "../../assets/XClose";
 //for field validation
 import { object, string } from "yup";
 
@@ -112,10 +112,10 @@ export const SignupPage = () => {
         }}
       >
         <Button
-          className="h-5 inline bg-transparent float-right font-bold text-1xl"
+          className="h-5 bg-transparent float-right font-bold text-3xl"
           onClick={() => navigateTo("/")}
         >
-          X
+          <XClose />
         </Button>
         <br />
         <h1
