@@ -1,3 +1,8 @@
+.homepage {
+  overflow-y: scroll;
+  position: relative;
+}
+
 .landing-page {
     background-color: #ffffff;
     display: flex;
@@ -108,5 +113,39 @@
     left: 226px !important;
     position: absolute !important;
     top: 332px !important;
+  }
+
+  .footer {
+    background-color: #dee6f4;
+    height: 763px;
+    width: 1440px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;   
+  }
+  
+  .footer .info {
+    height: 599px;
+    left: 115px;
+    top: 95px;
+    width: 1212px;
+  }
+  .footer .menu-footer{
+    display: grid;
+    justify-items: left;
+
+  }
+  
+  .footer .menu-footer-instance {
+    color: #25274c !important;
+    font-family: "Inter-Bold", Helvetica !important;
+    white-space: unset !important;
+  }
+  
+  .footer .menu-footer-vert-instance {
+    color: #25274c !important;
+    font-family: "Inter-Regular", Helvetica !important;
+    white-space: unset !important;
   }
   
