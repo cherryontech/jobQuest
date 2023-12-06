@@ -51,7 +51,7 @@ export default function TCard({
     setIsChecked(event);
     if (event && index === isDisabled) {
       localStorage.setItem(`${task}Enabled`, JSON.stringify(isDisabled + 1));
-      setIsDisabled((prev) => prev + 1)
+      setIsDisabled((prev) => prev + 1);
     }
     //update new state change within object
     const updatedInfo = { ...resource, [key]: event };
@@ -82,7 +82,7 @@ export default function TCard({
         <CardHeader className="flex justify-between items-center px-3 z-0">
           <div className="flex ">
             <Checkbox
-              isDisabled={isDisabled && isDisabled < index}
+              isDisabled={isDisabled != null && isDisabled < index}
               isSelected={isChecked}
               onValueChange={handleCheckboxChange(`card${index}`)}
               size="lg"
@@ -93,7 +93,7 @@ export default function TCard({
             <p className="text-md font-bold">{subCard.title}</p>
           </div>
           <Button
-            isDisabled={isDisabled && isDisabled < index}
+            isDisabled={isDisabled != null && isDisabled < index}
             onClick={() => setIsVisible(!isVisible)}
             className={`bg-transparent text-${resourceColor}`}
           >
