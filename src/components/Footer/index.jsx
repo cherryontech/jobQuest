@@ -3,7 +3,7 @@ import logo from "../../assets/logo.svg";
 export const Footer = () => {
   return (
     <div className="bg-[#DEE6F4] w-full h-96 py-8 px-16 absolute">
-      <div className="absolute">
+      <div className="relative">
         <div className="mb-8">
           <img className="" alt="logo" src={logo} />
         </div>
@@ -12,7 +12,7 @@ export const Footer = () => {
         <div className="grid grid-cols-12 col-span-12">
           {" "}
           {/* 12 columns */}
-          <div className="grid grid-cols-8 col-span-8 gap-2 border-r-8 border-primary-blue">
+          <div className="grid grid-cols-8 col-span-8 border-r-8 border-primary-blue">
             {" "}
             {/* 8 columns, border-right  */}
             <div>
@@ -26,7 +26,7 @@ export const Footer = () => {
                 <li>Help</li>
               </ol>
               <div className="grid col-start-1 col-span-2 col-end-3 text-primary-blue font-inter mt-6">
-               Copyright 2023
+                Copyright 2023
               </div>
             </div>
             <div>
@@ -58,7 +58,18 @@ export const Footer = () => {
             </div>
           </div>
           <div className="grid grid-cols-4 col-span-4">
-            
+            <div>
+              <div className="grid col-start-3 col-span-2 text-primary-blue font-bold font-inter">
+                Contact Us
+              </div>
+              <ol className="grid col-start-3 col-span-2 text-primary-blue font-inter">
+                <li>Wisconsin Ave, Suite 700 Chevy Chase, Maryland 20815</li>
+                <li>support@figma.com</li>
+              </ol>
+              <div className="grid col-start-3 col-span-2 text-primary-blue font-inter mt-12">
+                Legal
+              </div>
+            </div>
           </div>
         </div>
       </div>
