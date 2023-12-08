@@ -5,147 +5,116 @@
 }
 
 .landing-page {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-  }
-  
-  .landing-page .div {
-    background-color: #ffffff;
-    height: 898px;
-    overflow: hidden;
-    position: relative;
-    width: 1440px;
-  }
-  
-  .landing-page .text-wrapper {
-    color: #001561;
-    font-family: "Lato", Helvetica;
-    font-size: 32px;
-    font-weight: 800;
-    left: 226px;
-    letter-spacing: 0;
-    line-height: 20px;
-    position: absolute;
-    text-align: left;
-    top: 29px;
-    white-space: nowrap;
-  }
-  
-  .landing-page .overlap {
-    height: 647px;
-    left: 0;
-    position: absolute;
-    top: 161px;
-    width: 1446px;
-  }
-  
-  .landing-page .landing-section {
-    height: 647px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 1446px;
-  }
-  
-  .landing-page .image {
-    height: 415px;
-    left: 848px;
-    position: absolute;
-    top: 0;
-    width: 415px;
-  }
-  
-  .landing-page .overlap-group {
-    background-image: url(../../assets/yellowBanner.svg);
-    background-size: 100% 100%;
-    height: 152px;
-    left: 0;
-    position: absolute;
-    top: 495px;
-    width: 100vw;
-  }
-  
-  .landing-page .p {
-    color: #070a39;
-    font-family: "Lato", Helvetica;
-    font-size: 24px;
-    font-weight: 400;
-    left: 226px;
-    letter-spacing: 0;
-    line-height: 32px;
-    position: absolute;
-    top: 60px;
-    white-space: nowrap;
-    width: 752px;
-  }
-  
-  .landing-page .text-wrapper-2 {
-    color: #001561;
-    font-family: "Lato", Helvetica;
-    font-size: 36px;
-    font-weight: 300;
-    left: 226px;
-    letter-spacing: 0;
-    line-height: 40px;
-    position: absolute;
-    top: 175px;
-    width: 503px;
-    text-align: left;
-  }
-  
-  .landing-page .text-wrapper-3 {
-    color: #ff6667;
-    font-family: "Inter", Helvetica;
-    font-size: 48px;
-    font-weight: 700;
-    left: 226px;
-    letter-spacing: -0.96px;
-    line-height: 60px;
-    position: absolute;
-    top: 47px;
-    width: 523px;
-    text-align: left;
-  }
-  
-  .landing-page .buttons-instance {
-    left: 226px !important;
-    position: absolute !important;
-    top: 332px !important;
-  }
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
 
-  /* .footer {
-    margin-top: auto;
-    background-color: #dee6f4;
-    height: 763px;
-    width: 1440px;
-  }
-  
-  .footer .info {
-    height: 599px;
-    left: 115px;
-    top: 95px;
-    width: 1212px;
-  }
-  .footer .menu-footer{
-    display: -ms-flexbox;
-    justify-items: left;
+.landing-page .div {
+  height: 898px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
 
-  }
-  
-  .footer .menu-footer-instance {
-    color: #25274c !important;
-    font-family: "Inter-Bold", Helvetica !important;
-    white-space: unset !important;
-  }
-  
-  .footer .menu-footer-vert-instance {
-    color: #25274c !important;
-    font-family: "Inter-Regular", Helvetica !important;
-    white-space: unset !important;
-  } */
-  
+.landing-page .text-wrapper {
+  color: #001561;
+  font-family: "Lato", Helvetica;
+  font-size: 32px;
+  font-weight: 800;
+  left: 226px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 29px;
+  white-space: nowrap;
+}
+
+.landing-page .overlap {
+  height: 700px;
+  left: 0;
+  position: absolute;
+  top: 110px;
+  width: 100%;
+}
+
+.landing-page .landing-section {
+  height: 700px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.landing-page .image {
+  height: 550px;
+  object-fit: cover;
+  left: 810px;
+  position: absolute;
+  top: 0;
+  width: 550px;
+}
+
+.landing-page .overlap-group {
+  background-size: 100% 100%;
+  height: 220px;
+  background-color: #dee6f4;
+  object-fit: fill;
+  position: absolute;
+  top: 550px;
+  width: 100%;
+}
+
+.landing-page .p {
+  color: #070a39;
+  font-family: "Lato", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 226px;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 65px;
+  white-space: nowrap;
+  width: 752px;
+}
+
+.landing-page .text-wrapper-2 {
+  color: #001561;
+  font-family: "Lato", Helvetica;
+  font-size: 36px;
+  font-weight: 300;
+  left: 226px;
+  letter-spacing: 0;
+  line-height: 40px;
+  position: absolute;
+  top: 250px;
+  width: 503px;
+  text-align: left;
+}
+
+.landing-page .text-wrapper-3 {
+  color: #ff6667;
+  font-family: "Inter", Helvetica;
+  font-size: 48px;
+  font-weight: 700;
+  left: 226px;
+  letter-spacing: -0.96px;
+  line-height: 60px;
+  position: absolute;
+  top: 120px;
+  width: 523px;
+  text-align: left;
+}
+
+.landing-page .buttons-instance {
+  left: 226px !important;
+  position: relative !important;
+  top: 110px !important;
+}
+

@@ -2,7 +2,7 @@ import logo from "../../assets/logo.svg";
 
 export const Footer = () => {
   return (
-    <div className="bg-[#DEE6F4] w-full h-96 py-8 px-16 absolute">
+    <div className="bg-[#DEE6F4] w-full h-96 py-8 px-16 absolute top-[1480px]">
       <div className="relative">
         <div className="mb-8">
           <img className="" alt="logo" src={logo} />
