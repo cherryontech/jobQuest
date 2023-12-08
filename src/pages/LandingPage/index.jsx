@@ -1,5 +1,5 @@
 import { Buttons } from "../../components/Buttons";
-// import { Footer } from "../../components/Footer";
+import { Footer } from "../../components/Footer";
 import "./style.css";
 import finalHomepage from "../../assets/finalHomepage.png";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +8,8 @@ export const LandingPage = () => {
   const navigateTo = useNavigate();
 
   return (
-    <div className="landing-page">
+    <>
+    <div className="landing-page mb-12">
       <div className="div">
         <div className="overlap">
           <div className="landing-section">
@@ -26,8 +27,9 @@ export const LandingPage = () => {
             property1="solid-large-blue"
           />
         </div>
-      </div>
-      {/* <Footer /> */}
+      </div> 
     </div>
+    <Footer />
+    </>
   );
 };
