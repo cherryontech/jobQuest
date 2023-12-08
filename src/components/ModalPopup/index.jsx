@@ -6,6 +6,7 @@ import "./style.css";
 
 export const ModalPopup = ({ isOpen, onOpenChange, heading, subHeading, cta, bottomLine }) => {
   const navigateTo = useNavigate();
+  let updateClick = () => 0;
 
   return (
     <>
@@ -16,11 +17,11 @@ export const ModalPopup = ({ isOpen, onOpenChange, heading, subHeading, cta, bot
         size="3xl"
         className="modal-dialog bg-transparent flex flex-row justify-center overflow-x-hidden w-[698px] h-[479px]"
       >
-        <ModalContent className="relative bg-[#eff2f9] top-0 left-0">
+        <ModalContent className="relative bg-[#eff2f9]">
           {(onClose) => (
             <>
               <ModalHeader
-                className="text-4xl absolute w-[100%] top-[97px] left-[45px] [font-family:'Inter-Bold',Helvetica] font-bold text-[#24264c] text-[48px] text-center tracking-[0] leading-[71.8px] whitespace-nowrap"
+                className="place-content-center text-4xl absolute w-[100%] top-[97px] [font-family:'Inter-Bold',Helvetica] font-bold text-[#24264c] text-[48px] text-center tracking-[0] leading-[71.8px] whitespace-nowrap"
                 style={{ color: "#25274D" }}
               >
                 {heading}
@@ -30,13 +31,22 @@ export const ModalPopup = ({ isOpen, onOpenChange, heading, subHeading, cta, bot
                   {subHeading}
                 </p>
                 <Button
-                  className="!absolute !w-[36px] !h-[36px] !top-[26px] !left-[602px] cursor-pointer bg-transparent float-right font-bold text-3xl"
+                  className="!absolute !w-[36px] !h-[36px] !top-[26px] !left-[600px] cursor-pointer bg-transparent float-right font-bold text-3xl"
                   onClick={() => onClose()}
                 >
                   <XClose />
                 </Button>
+                {({ cta } === "Sign Up Free")
+                  ? updateClick = () => navigateTo("/signup")
+                  : updateClick = () => {
+                    localStorage.setItem("loginStatus", false);
+                  }
+                }
                 <Button
-                  onClick={() => navigateTo("/signup")}
+                  onClick={() => { 
+                    onClose()
+                    updateClick()
+                  } }
                   className="text-white text-3xl font-bold h-[84px] w-[363px] rounded-[23px] top-[281px] left-[127px]"
                   style={{
                     backgroundColor: "#090459",
@@ -50,7 +60,7 @@ export const ModalPopup = ({ isOpen, onOpenChange, heading, subHeading, cta, bot
                     &nbsp;
                   </span>
                   <span
-                    className="[font-family:'Inter-ExtraBold',Helvetica] font-extrabold text-[#ff6667] underline cursor-pointer"
+                    className={`[font-family:'Inter-ExtraBold',Helvetica] font-extrabold text-[#ff6667] underline cursor-pointer ${cta.split(" ",1)}`}
                     onClick={() => navigateTo("/login")}
                   >
                     Log In

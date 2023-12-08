@@ -6,15 +6,17 @@ import {
   NavbarContent,
   NavbarItem,
   Link,
-  Button,
+  Button, useDisclosure
 } from "@nextui-org/react";
 import "./style.css";
 import { useNavigate, useLocation } from "react-router-dom";
+import { ModalPopup } from "../ModalPopup";
 
 export const NavigationBar = () => {
   const navigateTo = useNavigate();
   const location = useLocation();
   const [isLoggedin, setIsLoggedIn] = useState(false);
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   useEffect(() => {
     const loginStatus = localStorage.getItem("loginStatus");
@@ -38,9 +40,8 @@ export const NavigationBar = () => {
         {isLoggedin ? (
           <NavbarItem className="nav-button mt-20 mb-20">
             <Button 
-            onClick={() => {
-              localStorage.setItem("loginStatus", false);
-              navigateTo("/login");
+                  onClick={() => {
+                    onOpen();
             }}
             className="signup-text">
               Log Out
@@ -61,7 +62,9 @@ export const NavigationBar = () => {
           </>
         )}
       </NavbarContent>
-    </Navbar>
+        </Navbar>
+        <ModalPopup isOpen={isOpen} onOpenChange={onOpenChange} heading="All done for today?" subHeading="Give yourself a pat on the back for all your hard work!" cta="Log Out" bottomLine=""/>
+
     </div>
   </div>
   );
