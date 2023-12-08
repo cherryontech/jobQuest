@@ -4,9 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { XClose } from "../../assets/XClose";
 import "./style.css";
 
-export const ModalPopup = ({ isOpen, onOpenChange, heading, subHeading, cta, bottomLine }) => {
+export const ModalPopup = ({ isOpen, onOpenChange, onBtnClick, heading, subHeading, cta, bottomLine }) => {
   const navigateTo = useNavigate();
-  let updateClick = () => 0;
 
   return (
     <>
@@ -36,16 +35,11 @@ export const ModalPopup = ({ isOpen, onOpenChange, heading, subHeading, cta, bot
                 >
                   <XClose />
                 </Button>
-                {({ cta } === "Sign Up Free")
-                  ? updateClick = () => navigateTo("/signup")
-                  : updateClick = () => {
-                    localStorage.setItem("loginStatus", false);
-                  }
-                }
+                
                 <Button
                   onClick={() => { 
                     onClose()
-                    updateClick()
+                    onBtnClick()
                   } }
                   className="text-white text-3xl font-bold h-[84px] w-[363px] rounded-[23px] top-[281px] left-[127px]"
                   style={{
@@ -81,5 +75,6 @@ ModalPopup.propTypes = {
   cta: PropTypes.string,
   bottomLine: PropTypes.string,
   isOpen: PropTypes.bool,
-  onOpenChange: PropTypes.func
+  onOpenChange: PropTypes.func,
+  onBtnClick: PropTypes.func
 };
