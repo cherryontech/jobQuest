@@ -41,7 +41,7 @@ export default function Articles() {
           /{" "}
           <span
             className="hover:text-[#FF6667] hover:opacity-100 hover:cursor-pointer"
-            onClick={() => navigateTo("/linkedin")}
+            onClick={() => navigateTo("/free-flowing/linkedin")}
           >
             LinkedIn
           </span>

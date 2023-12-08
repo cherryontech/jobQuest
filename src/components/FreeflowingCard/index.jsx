@@ -12,24 +12,29 @@ export const FreeflowingCard = ({ cardName, cardUrl }) => {
   const [value, setValue] = useState(0);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
-
   useEffect(() => {
-    fetchPercentage(cardName, setValue);
+    let status = JSON.parse(localStorage.getItem("loginStatus"));
+
+    if (status) fetchPercentage(cardName, setValue);
   }, [cardName]);
 
   const checkIfLoggedIn = () => {
     const loginStatus = localStorage.getItem("loginStatus");
 
     if (loginStatus === "true") {
-      navigateTo(`/${cardUrl}`);
+      navigateTo(`/free-flowing/${cardUrl}`);
     } else {
       onOpen();
     }
-  }; 
+  };
 
   return (
-    <div onClick={() => checkIfLoggedIn()}>
-      <Card className={`card-div cursor-pointer ${cardUrl}`}>
+    <>
+      <Card
+        isPressable
+        onPress={() => checkIfLoggedIn()}
+        className={`card-div cursor-pointer ${cardUrl}`}
+      >
         <CardBody>
           <div
             style={{
@@ -49,8 +54,16 @@ export const FreeflowingCard = ({ cardName, cardUrl }) => {
           <p className="card-name">{cardName}</p>
         </CardBody>
       </Card>
-      <ModalPopup isOpen={isOpen} onOpenChange={onOpenChange} heading="Want to save progress?" subHeading="Sign up or login now to see your completion!" cta="Sign Up Free" bottomLine="Already have an account?"/>
-    </div>
+      <ModalPopup
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        heading="Want to save progress?"
+        subHeading="Sign up or login now to see your completion!"
+        cta="Sign Up Free"
+        bottomLine="Already have an account?"
+        onBtnClick={() => navigateTo("/signup")}
+      />
+    </>
   );
 };
 

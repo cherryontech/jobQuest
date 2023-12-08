@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Image } from "@nextui-org/react";
 import { useNavigate, useParams } from "react-router-dom";
+import { Image } from "@nextui-org/react";
 import { PercentageScore } from "../../components/PercentageScore/index";
 
 import Resource from "./Card";
@@ -10,7 +10,8 @@ import mascot from "../../assets/finalHomepage.png";
 import { fetchPercentage } from "../../components/PercentageScore/fetchPercentage";
 
 export default function TaskCard() {
-  const { task } = useParams();
+  const { task, path } = useParams();
+  const [isDisabled, setIsDisabled] = useState(0);
   const [taskCardData, setTaskCardData] = useState([]);
   const [resource, setResource] = useState({});
   const [value, setValue] = React.useState(0);
@@ -22,37 +23,42 @@ export default function TaskCard() {
   }, [resource, taskCardData]);
 
   useEffect(() => {
-    const fetchResourceInfo = () => {
-      let res = JSON.parse(localStorage.getItem(task));
-      //on initial render set the key/value pairs of cards in localStorage
-      if (!res) {
-        res = {};
-        localStorage.setItem(task, JSON.stringify(res));
-      } else {
-        //else grab what's already in localStorage and render
-        setResource(res);
-      }
-    };
-    const fetchTaskJsonFile = async () => {
-      try {
-        const response = (await import(`./module-${task}.json`)).default;
-        setTaskCardData(response);
-      } catch (err) {
-        console.log(`error retrieving ${task} json file, ${err}`);
-        setTaskCardData([]);
-      }
-    };
+   
+      const fetchResourceInfo = () => {
+        let res = JSON.parse(localStorage.getItem(task));
+        let numberEnabled = JSON.parse(localStorage.getItem(`${task}Enabled`));
 
-    setResourceColor(
-      task === "linkedin"
-        ? "danger"
-        : task === "resume"
-        ? "success"
-        : "secondary"
-    );
+        //on initial render set the key/value pairs of cards in localStorage
+        if (!res) {
+          res = {};
+          localStorage.setItem(task, JSON.stringify(res));
+          localStorage.setItem(`${task}Enabled`, JSON.stringify(0));
+        } else {
+          //else grab what's already in localStorage and render
+          setResource(res);
+        }
+        setIsDisabled(path === 'free-flowing' ? null : numberEnabled);
+      };
+      const fetchTaskJsonFile = async () => {
+        try {
+          const response = (await import(`./module-${task}.json`)).default;
+          setTaskCardData(response);
+        } catch (err) {
+          console.log(`error retrieving ${task} json file, ${err}`);
+          setTaskCardData([]);
+        }
+      };
 
-    fetchResourceInfo();
-    fetchTaskJsonFile();
+      setResourceColor(
+        task === "linkedin"
+          ? "danger"
+          : task === "resume"
+          ? "success"
+          : "secondary"
+      );
+      fetchResourceInfo();
+      fetchTaskJsonFile();
+    
   }, [task]);
 
   return (
@@ -87,7 +93,7 @@ export default function TaskCard() {
               className="hover:text-[#FF6667] hover:opacity-100 hover:cursor-pointer"
               onClick={() => navigateTo("/roadmap")}
             >
-              Linear Path
+             {path === 'free-flowing' ? 'Free Flowing' : `${path.charAt(0).toUpperCase()}${path.slice(1)}`}
             </span>
           </p>
           <br />
@@ -118,6 +124,8 @@ export default function TaskCard() {
               index={index}
               task={task}
               resource={resource}
+              isDisabled={isDisabled}
+              setIsDisabled={setIsDisabled}
               resourceColor={resourceColor}
               checked={resource[`card${index}`]}
               setResource={setResource}

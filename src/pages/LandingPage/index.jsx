@@ -27,7 +27,7 @@ export const LandingPage = () => {
             property1="solid-large-blue"
           />
         </div>
-      </div>
+      </div> 
     </div>
     <Footer />
     </>
