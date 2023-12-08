@@ -61,6 +61,7 @@ export const FreeflowingCard = ({ cardName, cardUrl }) => {
         subHeading="Sign up or login now to see your completion!"
         cta="Sign Up Free"
         bottomLine="Already have an account?"
+        onBtnClick={() => navigateTo("/signup")}
       />
     </>
   );

@@ -63,8 +63,18 @@ export const NavigationBar = () => {
         )}
       </NavbarContent>
         </Navbar>
-        <ModalPopup isOpen={isOpen} onOpenChange={onOpenChange} heading="All done for today?" subHeading="Give yourself a pat on the back for all your hard work!" cta="Log Out" bottomLine=""/>
-
+        <ModalPopup
+          isOpen={isOpen}
+          onOpenChange={onOpenChange}
+          heading="All done for today?"
+          subHeading="Give yourself a pat on the back for all your hard work!"
+          cta="Log Out"
+          bottomLine=""
+          onBtnClick={() => {
+            localStorage.setItem("loginStatus", false);
+            navigateTo("/");
+          }}
+        />
     </div>
   </div>
   );
