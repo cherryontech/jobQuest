@@ -36,8 +36,8 @@ export default function TaskCard() {
         } else {
           //else grab what's already in localStorage and render
           setResource(res);
-          setIsDisabled(path === 'free-flowing' ? null : numberEnabled);
         }
+        setIsDisabled(path === 'free-flowing' ? null : numberEnabled);
       };
       const fetchTaskJsonFile = async () => {
         try {

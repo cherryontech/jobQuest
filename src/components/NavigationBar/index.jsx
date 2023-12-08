@@ -11,6 +11,8 @@ import {
 import "./style.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ModalPopup } from "../ModalPopup";
+import logo from "../../assets/logo.svg";
+
 
 export const NavigationBar = () => {
   const navigateTo = useNavigate();
@@ -32,7 +34,7 @@ export const NavigationBar = () => {
           className="logo-text cursor-pointer"
           onClick={() => navigateTo("/")}
         >
-          Job Quest
+          <img className="image" alt="logo" src={logo} />
         </div>
       </NavbarBrand>
 

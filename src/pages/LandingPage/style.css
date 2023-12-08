@@ -1,9 +1,17 @@
+.homepage {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
 .landing-page {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: left;
     width: 100%;
+    min-height: 100vh;
+    position: relative;
   }
   
   .landing-page .div {
@@ -108,5 +116,36 @@
     left: 226px !important;
     position: absolute !important;
     top: 332px !important;
+  }
+
+  .footer {
+    margin-top: auto;
+    background-color: #dee6f4;
+    height: 763px;
+    width: 1440px;
+  }
+  
+  .footer .info {
+    height: 599px;
+    left: 115px;
+    top: 95px;
+    width: 1212px;
+  }
+  .footer .menu-footer{
+    display: -ms-flexbox;
+    justify-items: left;
+
+  }
+  
+  .footer .menu-footer-instance {
+    color: #25274c !important;
+    font-family: "Inter-Bold", Helvetica !important;
+    white-space: unset !important;
+  }
+  
+  .footer .menu-footer-vert-instance {
+    color: #25274c !important;
+    font-family: "Inter-Regular", Helvetica !important;
+    white-space: unset !important;
   }
   
