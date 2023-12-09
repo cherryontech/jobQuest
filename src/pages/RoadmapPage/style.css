@@ -14,6 +14,11 @@
   width: 1440px;
 }
 
+.hero {
+  background-color: #FFFAFA;
+  height: 2261px;
+}
+
 .advice-tips {
   color: #ff6667;
   font-family: "Inter", Helvetica;
@@ -72,11 +77,11 @@
 
 .img {
   height: 2px;
-  left: 670px;
+  left: 833px;
   position: absolute;
-  top: 64px;
-  width: 743px;
-  height: 552px;
+  top: 160px;
+  width: 430px;
+  height: 430px;
 }
 
 .page-BG {
