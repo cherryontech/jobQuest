@@ -52,12 +52,12 @@
 }
 
 .landing-page .image {
-  height: 550px;
+  height: 480px;
   object-fit: cover;
   left: 810px;
   position: absolute;
   top: 0;
-  width: 550px;
+  width: 600px;
 }
 
 .landing-page .overlap-group {
