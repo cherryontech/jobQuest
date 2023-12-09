@@ -10,7 +10,7 @@ export const LandingPage = () => {
 
   return (
     <>
-      <div className="landing-page mb-12 ">
+      <div className="landing-page mb-12 w-full">
         <div className="div">
           <div className="overlap">
             <div className="landing-section">
