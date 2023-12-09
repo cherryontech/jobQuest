@@ -5,7 +5,7 @@ import { LinearPathCard } from "../../components/LinearPathCard";
 import { ScrollShadow } from "@nextui-org/react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import roadmapImg from "../../assets/RoadmapHeroImage.png";
+import roadmapImg from "../../assets/finalHomepage.png";
 import mascot from "../../assets/RoadmapMascot.png";
 
 export const RoadmapPage = () => {
@@ -13,6 +13,7 @@ export const RoadmapPage = () => {
   
   return (
     <div className="index">
+      <div className="w-full hero">
       <p className="advice-tips">Advice, Tips &amp; Actionable Steps</p>
 
       <p className="header-sub-text">
@@ -20,6 +21,8 @@ export const RoadmapPage = () => {
       </p>
 
       <img className="img" src={roadmapImg} />
+      </div>
+      
 
       <div className="overlap">
         <div className="page-BG" />
