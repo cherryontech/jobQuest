@@ -5,7 +5,7 @@ import checkmark from "../../assets/checkmark.svg";
 
 export default function JobQuestInsight() {
   return (
-    <div className="absolute top-[880px] flex items-center justify-center h-[600px] w-[100%] insight">
+    <div className="absolute top-[840px] flex items-center justify-center h-[600px] w-[100%] insight">
       <div className="absolute w-4/6 ">
         <h1 className="text-5xl text-[#2C2C2C] font-bold my-8  text-center">
           Wondering whether Job Quest is for you?
